@@ -1,41 +1,64 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
+import { useState, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/components/ui/label'
-import { Switch } from '@/components/ui/switch'
-import { supabase } from '@/lib/supabase/client'
-import { toast } from 'sonner'
-import type { Database } from '@/lib/supabase/types'
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { supabase } from "@/lib/supabase/client";
+import { toast } from "sonner";
+import type { Database } from "@/lib/supabase/types";
 
-type Bookmark = Database['public']['Tables']['bookmarks']['Row']
+type Bookmark = Database["public"]["Tables"]["bookmarks"]["Row"];
 
 interface BookmarkDialogProps {
-  isOpen: boolean
-  onOpenChange: (open: boolean) => void
-  bookmark?: Bookmark
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+  bookmark?: Bookmark;
 }
 
-export function BookmarkDialog({ isOpen, onOpenChange, bookmark }: BookmarkDialogProps) {
-  const [title, setTitle] = useState(bookmark?.title || '')
-  const [description, setDescription] = useState(bookmark?.description || '')
-  const [url, setUrl] = useState(bookmark?.urls[0] || '')
-  const [favorite, setFavorite] = useState(bookmark?.favorite || false)
-  const [readLater, setReadLater] = useState(bookmark?.read_later || false)
-  const [isLoading, setIsLoading] = useState(false)
+export function BookmarkDialog({
+  isOpen,
+  onOpenChange,
+  bookmark,
+}: BookmarkDialogProps) {
+  const [title, setTitle] = useState(bookmark?.title || "");
+  const [description, setDescription] = useState(bookmark?.description || "");
+  const [url, setUrl] = useState(bookmark?.urls[0] || "");
+  const [favorite, setFavorite] = useState(bookmark?.favorite || false);
+  const [readLater, setReadLater] = useState(bookmark?.read_later || false);
+  const [tags, setTags] = useState<string[]>(bookmark?.tags || []);
+  const [existingTags, setExistingTags] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchTags = async () => {
+      const { data, error } = await supabase.from("tags").select("name");
+      if (data) {
+        setExistingTags(data.map((tag) => tag.name));
+      }
+    };
+    fetchTags();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
+
+    const isAdmin = localStorage.getItem("isAdmin");
+    if (!isAdmin) {
+      toast.error("You are not authenticated");
+      setIsLoading(false);
+      return;
+    }
 
     const bookmarkData = {
       title,
@@ -43,46 +66,47 @@ export function BookmarkDialog({ isOpen, onOpenChange, bookmark }: BookmarkDialo
       urls: [url],
       favorite,
       read_later: readLater,
-    }
+      tags,
+    };
 
     try {
       if (bookmark) {
         const { error } = await supabase
-          .from('bookmarks')
+          .from("bookmarks")
           .update(bookmarkData)
-          .eq('id', bookmark.id)
+          .eq("id", bookmark.id);
 
-        if (error) throw error
-        toast.success('bookmark updated')
+        if (error) throw error;
+        toast.success("bookmark updated");
       } else {
-        const { error } = await supabase
-          .from('bookmarks')
-          .insert(bookmarkData)
+        const { error } = await supabase.from("bookmarks").insert(bookmarkData);
 
-        if (error) throw error
-        toast.success('bookmark created')
+        if (error) throw error;
+        toast.success("bookmark created");
       }
 
-      onOpenChange(false)
+      onOpenChange(false);
     } catch (error) {
-      toast.error('failed to save bookmark')
+      toast.error("failed to save bookmark");
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className="max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>{bookmark ? 'edit' : 'add'} bookmark</DialogTitle>
+          <DialogTitle>{bookmark ? "Edit" : "Add"} Bookmark</DialogTitle>
           <DialogDescription>
-            {bookmark ? 'update the bookmark details' : 'add a new bookmark to your collection'}
+            {bookmark
+              ? "Update the bookmark details"
+              : "Add a new bookmark to your collection"}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="title">title</Label>
+            <Label htmlFor="title">Title</Label>
             <Input
               id="title"
               value={title}
@@ -91,7 +115,7 @@ export function BookmarkDialog({ isOpen, onOpenChange, bookmark }: BookmarkDialo
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="url">url</Label>
+            <Label htmlFor="url">URL</Label>
             <Input
               id="url"
               type="url"
@@ -101,7 +125,9 @@ export function BookmarkDialog({ isOpen, onOpenChange, bookmark }: BookmarkDialo
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="description">description (markdown supported)</Label>
+            <Label htmlFor="description">
+              Description (Markdown supported)
+            </Label>
             <Textarea
               id="description"
               value={description}
@@ -109,14 +135,38 @@ export function BookmarkDialog({ isOpen, onOpenChange, bookmark }: BookmarkDialo
               rows={4}
             />
           </div>
-          <div className="flex items-center justify-between">
+          <div className="space-y-2">
+            <Label htmlFor="tags">Tags</Label>
+            <Input
+              id="tags"
+              value={tags.join(", ")}
+              onChange={(e) =>
+                setTags(e.target.value.split(",").map((tag) => tag.trim()))
+              }
+              placeholder="Comma separated tags"
+            />
+            <div className="flex flex-wrap gap-2 mt-2">
+              {existingTags.map((tag) => (
+                <Button
+                  key={tag}
+                  variant="outline"
+                  onClick={() =>
+                    setTags((prevTags) => [...new Set([...prevTags, tag])])
+                  }
+                >
+                  {tag}
+                </Button>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center justify-between mt-4">
             <div className="flex items-center space-x-2">
               <Switch
                 id="favorite"
                 checked={favorite}
                 onCheckedChange={setFavorite}
               />
-              <Label htmlFor="favorite">favorite</Label>
+              <Label htmlFor="favorite">Favorite</Label>
             </div>
             <div className="flex items-center space-x-2">
               <Switch
@@ -124,14 +174,14 @@ export function BookmarkDialog({ isOpen, onOpenChange, bookmark }: BookmarkDialo
                 checked={readLater}
                 onCheckedChange={setReadLater}
               />
-              <Label htmlFor="readLater">read later</Label>
+              <Label htmlFor="readLater">Read Later</Label>
             </div>
           </div>
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {bookmark ? 'update' : 'create'} bookmark
+          <Button type="submit" className="w-full mt-4" disabled={isLoading}>
+            {isLoading ? "Saving..." : bookmark ? "Update" : "Create"} Bookmark
           </Button>
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
