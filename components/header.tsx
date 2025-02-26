@@ -23,7 +23,7 @@ export function Header() {
 
   const updateSearch = (value: string) => {
     setSearch(value);
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
     if (value) {
       params.set("q", value);
     } else {
@@ -33,7 +33,7 @@ export function Header() {
   };
 
   const updateView = (newView: string) => {
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
     params.set("view", newView);
     router.push(`/?${params.toString()}`);
   };
