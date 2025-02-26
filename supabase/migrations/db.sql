@@ -1,5 +1,5 @@
 /*
-  # Initial Bookmark Manager Schema
+  # Initial database schema
 
   1. New Tables
     - `passphrases`
