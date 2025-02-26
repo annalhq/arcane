@@ -97,16 +97,16 @@ export function BookmarkDialog({
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>{bookmark ? "Edit" : "Add"} Bookmark</DialogTitle>
+          <DialogTitle>{bookmark ? "edit" : "add"} bookmark</DialogTitle>
           <DialogDescription>
             {bookmark
               ? "Update the bookmark details"
-              : "Add a new bookmark to your collection"}
+              : "add a new bookmark to your collection"}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="title">Title</Label>
+            <Label htmlFor="title">title</Label>
             <Input
               id="title"
               value={title}
@@ -115,7 +115,7 @@ export function BookmarkDialog({
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="url">URL</Label>
+            <Label htmlFor="url">url</Label>
             <Input
               id="url"
               type="url"
@@ -126,7 +126,7 @@ export function BookmarkDialog({
           </div>
           <div className="space-y-2">
             <Label htmlFor="description">
-              Description (Markdown supported)
+              description
             </Label>
             <Textarea
               id="description"
@@ -136,14 +136,14 @@ export function BookmarkDialog({
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="tags">Tags</Label>
+            <Label htmlFor="tags">tags</Label>
             <Input
               id="tags"
               value={tags.join(", ")}
               onChange={(e) =>
                 setTags(e.target.value.split(",").map((tag) => tag.trim()))
               }
-              placeholder="Comma separated tags"
+              placeholder="comma separated tags"
             />
             <div className="flex flex-wrap gap-2 mt-2">
               {existingTags.map((tag) => (
@@ -166,7 +166,7 @@ export function BookmarkDialog({
                 checked={favorite}
                 onCheckedChange={setFavorite}
               />
-              <Label htmlFor="favorite">Favorite</Label>
+              <Label htmlFor="favorite">favorite</Label>
             </div>
             <div className="flex items-center space-x-2">
               <Switch
@@ -174,11 +174,11 @@ export function BookmarkDialog({
                 checked={readLater}
                 onCheckedChange={setReadLater}
               />
-              <Label htmlFor="readLater">Read Later</Label>
+              <Label htmlFor="readLater">read later</Label>
             </div>
           </div>
           <Button type="submit" className="w-full mt-4" disabled={isLoading}>
-            {isLoading ? "Saving..." : bookmark ? "Update" : "Create"} Bookmark
+            {isLoading ? "Saving..." : bookmark ? "update" : "create"} bookmark
           </Button>
         </form>
       </DialogContent>
