@@ -51,14 +51,14 @@ export function Header() {
   return (
     <div className="mb-8 space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold tracking-tight">bookmarks</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">arcane.</h1>
         <Button onClick={() => setIsAuthDialogOpen(true)}>Authenticate</Button>
       </div>
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="search bookmarks..."
+            placeholder="search annalhq's bookmarks..."
             className="pl-8"
             value={search}
             onChange={(e) => updateSearch(e.target.value)}
