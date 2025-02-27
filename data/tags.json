@@ -1,0 +1,8 @@
+[
+  { "name": "article", "color": "hsl(210, 100%, 90%)" },
+  { "name": "video", "color": "hsl(0, 100%, 90%)" },
+  { "name": "tool", "color": "hsl(120, 100%, 90%)" },
+  { "name": "resource", "color": "hsl(270, 100%, 90%)" },
+  { "name": "inspiration", "color": "hsl(30, 100%, 90%)" },
+  { "name": "tutorial", "color": "hsl(180, 100%, 90%)" }
+]
