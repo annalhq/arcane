@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // for static site generation (WARNING: don't turn on, nextAuth will go brrr!)
+  // output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
