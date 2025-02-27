@@ -85,7 +85,7 @@ export function ContentCard({ content, tags, onEdit, onDelete, onToggleStar }: C
           <Button 
             variant="ghost" 
             size="icon" 
-            className="h-a8 w-8 text-destructive"
+            className="h-8 w-8 text-destructive"
             onClick={() => onDelete(content.id)}
             aria-label="Delete"
           >
