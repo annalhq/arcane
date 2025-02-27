@@ -1,1 +1,35 @@
-[]
+[
+     {
+          "id": "1",
+          "title": "Introduction to React",
+          "description": "A beginner's guide to React.js for new developers.",
+          "createdAt": "2025-02-20T10:30:00Z",
+          "url": "https://reactjs.org/",
+          "starred": false,
+          "tags": [
+               "tool"
+          ]
+     },
+     {
+          "id": "2",
+          "title": "Mastering CSS Grid",
+          "description": "Learn CSS Grid layout system in depth.",
+          "createdAt": "2025-02-22T14:15:00Z",
+          "url": "https://css-tricks.com/snippets/css/complete-guide-grid/",
+          "starred": true,
+          "tags": [
+               "resource"
+          ]
+     },
+     {
+          "id": "3",
+          "title": "Understanding JavaScript Closures",
+          "description": "An article explaining closures in JavaScript and how they work.",
+          "createdAt": "2025-02-25T09:00:00Z",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+          "starred": false,
+          "tags": [
+               "tutorial"
+          ]
+     }
+]
