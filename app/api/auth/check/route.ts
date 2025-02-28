@@ -1,11 +1,12 @@
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '@/lib/authOptions';
 import { NextResponse } from 'next/server';
-import { isAuthenticated } from '@/lib/auth';
 
 export async function GET() {
   try {
-    const authenticated = isAuthenticated();
-    
-    if (authenticated) {
+    const session = await getServerSession(authOptions);
+
+    if (session) {
       return NextResponse.json({ authenticated: true });
     } else {
       return NextResponse.json(
