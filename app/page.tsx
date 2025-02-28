@@ -12,6 +12,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { PlusCircle, LogOut } from "lucide-react";
 import { filterContent } from "@/lib/utils";
+import { signOut } from "next-auth/react";
 
 export default function Home() {
   const [content, setContent] = useState<Content[]>([]);
@@ -202,7 +203,7 @@ export default function Home() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={handleLogout}
+              onClick={() => signOut()}
               aria-label="Logout"
             >
               <LogOut className="h-5 w-5" />
