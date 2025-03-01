@@ -1,0 +1,24 @@
+[
+  {
+    "id": "deep-learning",
+    "name": "Deep Learning",
+    "description": "Resources related to deep learning"
+  },
+  {
+    "id": "courses",
+    "name": "Courses",
+    "description": "Educational courses"
+  },
+  {
+    "id": "reinforcement-learning",
+    "name": "Reinforcement Learning",
+    "parentId": "deep-learning",
+    "description": "Resources for reinforcement learning"
+  },
+  {
+    "id": "computer-vision",
+    "name": "Computer Vision",
+    "parentId": "deep-learning",
+    "description": "Computer vision resources"
+  }
+]

@@ -4,14 +4,34 @@ import {
   addContent as addContentToStore,
   updateContent as updateContentInStore,
   deleteContent as deleteContentFromStore,
-  toggleStarred as toggleStarredInStore
+  toggleStarred as toggleStarredInStore,
+  getContentByTag,
+  getContentByCollection,
+  searchContent
 } from '@/lib/content';
 import { requireAuth } from '@/lib/auth';
 import { Content } from '@/types';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const content = getAllContent();
+    const { searchParams } = new URL(request.url);
+    const tag = searchParams.get('tag');
+    const collectionId = searchParams.get('collectionId');
+    const query = searchParams.get('query');
+    const tags = searchParams.getAll('tags');
+    
+    let content;
+    
+    if (query) {
+      content = searchContent(query, tags.length > 0 ? tags : undefined, collectionId || undefined);
+    } else if (tag) {
+      content = getContentByTag(tag);
+    } else if (collectionId) {
+      content = getContentByCollection(collectionId);
+    } else {
+      content = getAllContent();
+    }
+    
     return NextResponse.json(content);
   } catch (error) {
     console.error('Error fetching content:', error);
@@ -42,6 +62,7 @@ export async function POST(request: NextRequest) {
       description: contentData.description,
       tags: contentData.tags,
       starred: contentData.starred || false,
+      collectionId: contentData.collectionId,
     });
     
     return NextResponse.json(newContent, { status: 201 });

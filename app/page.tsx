@@ -3,52 +3,26 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Content, Tag } from "@/types";
-import { ContentCard } from "@/components/content-card";
+import { ContentList } from "@/components/content-list";
+import { Sidebar } from "@/components/sidebar";
 import { ContentForm } from "@/components/content-form";
-import { SearchBar } from "@/components/search-bar";
-import { TagFilter } from "@/components/tag-filter";
-import { EmptyState } from "@/components/empty-state";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { PlusCircle, LogOut } from "lucide-react";
-import { filterContent } from "@/lib/utils";
-import { signOut } from "next-auth/react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Menu, Plus, List, Grid } from "lucide-react";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
   const [content, setContent] = useState<Content[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [filteredContent, setFilteredContent] = useState<Content[]>([]);
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [editingContent, setEditingContent] = useState<Content | undefined>(
-    undefined
-  );
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [editingContent, setEditingContent] = useState<Content | undefined>(undefined);
+  const [viewMode, setViewMode] = useState<"feed" | "grid">("feed");
+  
   const router = useRouter();
-
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const response = await fetch("/api/auth/check", {
-          credentials: "include",
-        });
-
-        if (response.status === 401) {
-          router.push("/login");
-        } else if (response.ok) {
-          setIsAuthenticated(true);
-        }
-      } catch (error) {
-        console.error("Auth check error:", error);
-        router.push("/login");
-      }
-    };
-
-    checkAuth();
-  }, [router]);
+  const { data: session } = useSession();
+  const isAuthenticated = !!session;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -73,18 +47,10 @@ export default function Home() {
       }
     };
 
-    if (isAuthenticated) {
-      fetchData();
-    }
-  }, [isAuthenticated]);
+    fetchData();
+  }, []);
 
-  useEffect(() => {
-    setFilteredContent(filterContent(content, searchQuery, selectedTags));
-  }, [content, searchQuery, selectedTags]);
-
-  const handleAddContent = async (
-    newContent: Omit<Content, "id" | "createdAt">
-  ) => {
+  const handleAddContent = async (newContent: Omit<Content, "id" | "createdAt">) => {
     try {
       const response = await fetch("/api/content", {
         method: "POST",
@@ -124,145 +90,77 @@ export default function Home() {
     }
   };
 
-  const handleDeleteContent = async (id: string) => {
-    if (!confirm("are you sure you want to delete this content?")) return;
-
-    try {
-      const response = await fetch(`/api/content?id=${id}`, {
-        method: "DELETE",
-      });
-
-      if (response.ok) {
-        setContent((prev) => prev.filter((item) => item.id !== id));
-      }
-    } catch (error) {
-      console.error("Error deleting content:", error);
-    }
-  };
-
-  const handleToggleStar = async (id: string) => {
-    try {
-      const response = await fetch(`/api/content/star?id=${id}`, {
-        method: "PUT",
-      });
-
-      if (response.ok) {
-        const updated = await response.json();
-        setContent((prev) =>
-          prev.map((item) => (item.id === updated.id ? updated : item))
-        );
-      }
-    } catch (error) {
-      console.error("Error toggling star:", error);
-    }
-  };
-
-  const handleTagSelect = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-  };
-
-  const handleClearFilters = () => {
-    setSelectedTags([]);
-    setSearchQuery("");
-  };
-
   const handleEditContent = (content: Content) => {
     setEditingContent(content);
     setIsFormOpen(true);
   };
 
-  const handleLogout = async () => {
-    try {
-      const response = await fetch("/api/auth/logout", {
-        method: "POST",
-      });
-
-      if (response.ok) {
-        router.push("/login");
-      }
-    } catch (error) {
-      console.error("Logout error:", error);
-    }
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
-  if (!isAuthenticated) {
-    return null;
-  }
+  const toggleViewMode = () => {
+    setViewMode(viewMode === "feed" ? "grid" : "feed");
+  };
 
   return (
-    <div className="min-h-screen">
-      <header className="border-b sticky top-0 bg-background z-10">
-        <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <h1 className="text-xl font-medium">content library</h1>
+    <div className="min-h-screen bg-background">
+      <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
+      
+      <div className={`transition-all duration-200 ${isSidebarOpen ? "lg:ml-64" : "ml-0"}`}>
+        <header className="border-b sticky top-0 bg-background z-10">
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Toggle sidebar">
+                <Menu className="h-5 w-5" />
+              </Button>
+              <h1 className="text-xl font-medium">Content Library</h1>
+            </div>
 
-          <div className="flex items-center gap-2">
-            <SearchBar onSearch={setSearchQuery} />
-            <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => signOut()}
-              aria-label="Logout"
-            >
-              <LogOut className="h-5 w-5" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={toggleViewMode}
+                aria-label={`Switch to ${viewMode === "feed" ? "grid" : "feed"} view`}
+              >
+                {viewMode === "feed" ? <Grid className="h-5 w-5" /> : <List className="h-5 w-5" />}
+              </Button>
+              <ThemeToggle />
+              {isAuthenticated && (
+                <Button onClick={() => setIsFormOpen(true)}>
+                  <Plus className="h-4 w-4 mr-2" />
+                  Add Content
+                </Button>
+              )}
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-          <TagFilter
-            tags={tags}
-            selectedTags={selectedTags}
-            onTagSelect={handleTagSelect}
-            onClearFilters={handleClearFilters}
-          />
-
-          <Button
-            onClick={() => {
-              setEditingContent(undefined);
-              setIsFormOpen(true);
-            }}
-          >
-            <PlusCircle className="h-4 w-4 mr-2" />
-            add content
-          </Button>
-        </div>
-
-        {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-pulse">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-64 bg-muted rounded-lg"></div>
-            ))}
-          </div>
-        ) : filteredContent.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredContent.map((item) => (
-              <ContentCard
-                key={item.id}
-                content={item}
-                tags={tags}
-                onEdit={handleEditContent}
-                onDelete={handleDeleteContent}
-                onToggleStar={handleToggleStar}
-              />
-            ))}
-          </div>
-        ) : content.length > 0 ? (
-          <EmptyState type="no-results" />
-        ) : (
-          <EmptyState
-            type="no-content"
-            onAddContent={() => {
-              setEditingContent(undefined);
-              setIsFormOpen(true);
-            }}
-          />
-        )}
-      </main>
+        <main className="container mx-auto px-4 py-8">
+          {isLoading ? (
+            <div className="space-y-6 animate-pulse">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="space-y-4">
+                  <div className="h-6 w-32 bg-muted rounded"></div>
+                  {[...Array(3)].map((_, j) => (
+                    <div key={j} className="space-y-2">
+                      <div className="h-5 w-3/4 bg-muted rounded"></div>
+                      <div className="h-4 w-1/2 bg-muted rounded"></div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <ContentList 
+              initialContent={content} 
+              tags={tags} 
+              onEdit={handleEditContent}
+            />
+          )}
+        </main>
+      </div>
 
       <ContentForm
         isOpen={isFormOpen}

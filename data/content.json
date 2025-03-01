@@ -1,46 +1,40 @@
 [
-     {
-          "id": "1",
-          "title": "Reinforcement Learning",
-          "description": "张伟楠",
-          "createdAt": "2025-02-20T10:30:00Z",
-          "url": "https://hrl.boyuai.com/",
-          "starred": false,
-          "tags": [
-               "tool"
-          ]
-     },
-     {
-          "id": "2",
-          "title": "Chinese IOI training camp",
-          "description": "Team reports",
-          "createdAt": "2025-02-22T14:15:00Z",
-          "url": "https://codeforces.com/blog/entry/85121",
-          "starred": true,
-          "tags": [
-               "programming"
-          ]
-     },
-     {
-          "id": "3",
-          "title": "Lempel Ziv complexity",
-          "description": "A tool to quantify the uncertainty contained in time series data",
-          "createdAt": "2025-02-25T09:00:00Z",
-          "url": "https://www.wikiwand.com/en/articles/Lempel%E2%80%93Ziv_complexity",
-          "starred": true,
-          "tags": [
-               "programming"
-          ]
-     },
-     {
-          "id": "3",
-          "title": "Dive into Deep Learning",
-          "description": "Interactive deep learning book with code, math, and discussions",
-          "createdAt": "2025-02-25T09:00:00Z",
-          "url": "https://d2l.ai/",
-          "starred": true,
-          "tags": [
-               "ml"
-          ]
-     }
+  {
+    "id": "1",
+    "title": "Reinforcement Learning",
+    "description": "张伟楠",
+    "createdAt": "2025-02-20T10:30:00Z",
+    "url": "https://hrl.boyuai.com/",
+    "starred": false,
+    "tags": ["tool"],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "2",
+    "title": "Chinese IOI training camp",
+    "description": "Team reports",
+    "createdAt": "2025-02-22T14:15:00Z",
+    "url": "https://codeforces.com/blog/entry/85121",
+    "starred": true,
+    "tags": ["programming"]
+  },
+  {
+    "id": "3",
+    "title": "Lempel Ziv complexity",
+    "description": "A tool to quantify the uncertainty contained in time series data",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://www.wikiwand.com/en/articles/Lempel%E2%80%93Ziv_complexity",
+    "starred": true,
+    "tags": ["programming"]
+  },
+  {
+    "id": "4",
+    "title": "Dive into Deep Learning",
+    "description": "Interactive deep learning book with code, math, and discussions",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://d2l.ai/",
+    "starred": true,
+    "tags": ["ml"],
+    "collectionId": "deep-learning"
+  }
 ]
