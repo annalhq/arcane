@@ -35,12 +35,13 @@ export function LoginForm() {
       <CardHeader className="space-y-1">
         <CardTitle className="text-2xl text-center">login</CardTitle>
         <CardDescription className="text-center">
-          sign in to access your content library
+          sign in to access annalhq&apos;s library
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
-          <Button
+          {/* for now no Github Login */}
+          {/* <Button
             variant="outline"
             className="w-full flex items-center justify-center gap-2"
             onClick={handleGithubSignIn}
@@ -48,7 +49,7 @@ export function LoginForm() {
           >
             <Github className="h-4 w-4" />
             <span>Sign in with GitHub</span>
-          </Button>
+          </Button> */}
 
           <Button
             variant="outline"
@@ -79,7 +80,7 @@ export function LoginForm() {
               />
               <path fill="none" d="M1 1h22v22H1z" />
             </svg>
-            <span>Sign in with Google</span>
+            <span>Sign in with Google (admin)</span>
           </Button>
         </div>
 
@@ -96,7 +97,7 @@ export function LoginForm() {
 
         <Button
           className="w-full flex items-center justify-center gap-2"
-          onClick={() => signIn("credentials", { callbackUrl: "/" })}
+          // onClick={() => signIn("credentials", { callbackUrl: "/" })}
           disabled={isLoading}
         >
           <LogIn className="h-4 w-4" />

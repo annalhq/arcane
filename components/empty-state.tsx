@@ -14,7 +14,7 @@ export function EmptyState({ type, onAddContent }: EmptyStateProps) {
           <FileQuestion className="h-16 w-16 text-muted-foreground mb-4" />
           <h3 className="text-lg font-medium mb-2">no content yet</h3>
           <p className="text-muted-foreground mb-6 max-w-md">
-            you haven't added any content yet. start by adding your first item.
+            you haven&apos;t added any content yet. start by adding your first item.
           </p>
           {onAddContent && (
             <Button onClick={onAddContent}>
@@ -28,7 +28,7 @@ export function EmptyState({ type, onAddContent }: EmptyStateProps) {
           <Search className="h-16 w-16 text-muted-foreground mb-4" />
           <h3 className="text-lg font-medium mb-2">no results found</h3>
           <p className="text-muted-foreground mb-6 max-w-md">
-            we couldn't find any content matching your search or filters. try adjusting your criteria.
+            we couldn&apos;t find any content matching your search or filters. try adjusting your criteria.
           </p>
         </>
       )}
