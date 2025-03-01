@@ -70,24 +70,7 @@ export function ContentCard({
           {formatDate(content.createdAt)}
         </p>
       </CardHeader>
-      <CardContent className="pb-2 flex-grow">
-        <p className="text-sm text-muted-foreground mb-4">
-          {content.description}
-        </p>
-        {content.url && (
-          <a
-            href={content.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary inline-flex items-center gap-1 hover:underline mb-2"
-          >
-            <ExternalLink className="h-3 w-3 flex-shrink-0" />
-            <span className="truncate max-w-[200px] inline-block">
-              {content.url}
-            </span>
-          </a>
-        )}
-      </CardContent>
+      
       <CardFooter className="flex flex-col items-start pt-0">
         <div className="flex flex-wrap gap-1 mb-2">
           {contentTags.map((tag) => (
