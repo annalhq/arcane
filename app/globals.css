@@ -214,3 +214,17 @@
 .guest-avatar {
   @apply bg-primary text-primary-foreground rounded-full flex items-center justify-center font-medium;
 }
+
+/* Fix for long URLs */
+a[href] {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure proper spacing in mobile view */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
