@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Plus, ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { getGuestSession } from "@/lib/utils";
 
 interface CollectionContentProps {
   collectionId: string;
@@ -21,7 +22,8 @@ export function CollectionContent({ collectionId }: CollectionContentProps) {
 
   const router = useRouter();
   const { data: session } = useSession();
-  const isAuthenticated = !!session;
+  const guestSession = getGuestSession();
+  const isAuthenticated = !!session || guestSession.isAuthenticated;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -144,7 +146,7 @@ export function CollectionContent({ collectionId }: CollectionContentProps) {
         <ContentList
           initialContent={content}
           tags={tags}
-          onEdit={handleEditContent}
+          onEdit={isAuthenticated ? handleEditContent : undefined}
           onDelete={handleDeleteContent}
           viewMode={viewMode}
         />
