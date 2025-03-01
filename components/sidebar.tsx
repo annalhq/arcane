@@ -44,12 +44,14 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
     null
   );
   const [isMobile, setIsMobile] = useState(false);
+  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
   const { data: session } = useSession();
   const guestSession = getGuestSession();
   const isAuthenticated = !!session || guestSession.isAuthenticated;
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -182,6 +184,10 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
     }
   };
 
+  const toggleSearchExpand = () => {
+    setIsSearchExpanded(!isSearchExpanded);
+  };
+
   const sidebarContent = (
     <div className="flex h-full flex-col overflow-y-auto p-4 bg-background text-foreground theme-transition">
       <div className="flex items-center justify-between mb-6">
@@ -201,17 +207,37 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
 
       {/* Search Section */}
       <div className="mb-6">
-        <div className="flex items-center gap-2 mb-2">
-          <Input
-            placeholder="Search..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="h-8"
-          />
-          <Button size="sm" variant="ghost" onClick={handleSearch}>
-            <Search className="h-4 w-4" />
+        {isSearchExpanded ? (
+          <div className="flex items-center gap-2 mb-2">
+            <Input
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="h-8"
+              ref={searchInputRef}
+            />
+            <Button size="sm" variant="ghost" onClick={handleSearch}>
+              <Search className="h-4 w-4" />
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={toggleSearchExpand}
+              className="h-8 w-8 p-0"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
+        ) : (
+          <Button
+            variant="outline"
+            className="w-full flex justify-between items-center"
+            onClick={toggleSearchExpand}
+          >
+            <span className="text-muted-foreground">Search...</span>
+            <Search className="h-4 w-4 text-muted-foreground" />
           </Button>
-        </div>
+        )}
 
         {(searchQuery || selectedTags.length > 0 || selectedCollection) && (
           <Button
@@ -429,4 +455,3 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
     </div>
   );
 }
-
