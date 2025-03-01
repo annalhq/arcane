@@ -13,9 +13,9 @@ export function Tag({ tag, onClick, selected, className }: TagProps) {
     <button
       onClick={onClick}
       className={cn(
-        "inline-flex items-center px-2 py-1 text-xs rounded-full transition-all",
+        "inline-flex items-center px-2 py-1 text-xs rounded-full transition-all theme-transition",
         "hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2",
-        selected && "ring-2 ring-offset-2 ring-catppuccin-mauve",
+        selected && "ring-2 ring-offset-2 ring-primary",
         className
       )}
       style={{
