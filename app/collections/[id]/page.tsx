@@ -17,14 +17,15 @@ export default function CollectionPage({ params }: { params: { id: string } }) {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
-      
-      <div className={`transition-all duration-200 ${isSidebarOpen ? "lg:ml-64" : "ml-0"}`}>
+
+      <div
+        className={`transition-all duration-200 ${
+          isSidebarOpen ? "lg:ml-64" : "ml-0"
+        }`}
+      >
         <header className="border-b sticky top-0 bg-background z-10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Toggle sidebar">
-                <Menu className="h-5 w-5" />
-              </Button>
+            <div className="flex items-center gap-2 ml-10 lg:ml-0">
               <h1 className="text-xl font-medium">Collection</h1>
             </div>
 
