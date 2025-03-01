@@ -8,8 +8,9 @@ import { Sidebar } from "@/components/sidebar";
 import { ContentForm } from "@/components/content-form";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { Menu, Plus, List, Grid } from "lucide-react";
+import { Menu, Plus, List, Grid, AlignLeft } from "lucide-react";
 import { useSession } from "next-auth/react";
+import { getGuestSession } from "@/lib/utils";
 
 export default function Home() {
   const [content, setContent] = useState<Content[]>([]);
@@ -20,11 +21,12 @@ export default function Home() {
   const [editingContent, setEditingContent] = useState<Content | undefined>(
     undefined
   );
-  const [viewMode, setViewMode] = useState<"feed" | "grid">("feed");
+  const [viewMode, setViewMode] = useState<"feed" | "grid" | "flat">("feed");
 
   const router = useRouter();
   const { data: session } = useSession();
-  const isAuthenticated = !!session;
+  const guestSession = getGuestSession();
+  const isAuthenticated = !!session || guestSession.isAuthenticated;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,8 +87,8 @@ export default function Home() {
 
       if (response.ok) {
         const updated = await response.json();
-        setContent((prev) =>
-          prev.map((item) => (item.id === updated.id ? updated : item))
+        setContent(
+          content.map((item) => (item.id === updated.id ? updated : item))
         );
       }
     } catch (error) {
@@ -104,19 +106,25 @@ export default function Home() {
   };
 
   const toggleViewMode = () => {
-    setViewMode(viewMode === "feed" ? "grid" : "feed");
+    if (viewMode === "feed") {
+      setViewMode("grid");
+    } else if (viewMode === "grid") {
+      setViewMode("flat");
+    } else {
+      setViewMode("feed");
+    }
   };
 
   return (
-    <div className="min-h-screen bg-catppuccin-base text-catppuccin-text">
+    <div className="min-h-screen bg-background text-foreground theme-transition">
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
 
       <div
-        className={`transition-all duration-200 ${
-          isSidebarOpen ? "lg:ml-64" : "ml-0"
+        className={`transition-all duration-300 ${
+          isSidebarOpen ? "lg:ml-64" : "ml-0 lg:ml-16"
         }`}
       >
-        <header className="border-b border-catppuccin-surface0 sticky top-0 bg-catppuccin-base z-10">
+        <header className="border-b sticky top-0 bg-background z-10 theme-transition">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Button
@@ -135,13 +143,13 @@ export default function Home() {
                 variant="ghost"
                 size="icon"
                 onClick={toggleViewMode}
-                aria-label={`Switch to ${
-                  viewMode === "feed" ? "grid" : "feed"
-                } view`}
-                className={viewMode === "grid" ? "bg-catppuccin-surface0" : ""}
+                aria-label={`Switch view mode`}
+                className={viewMode !== "feed" ? "bg-accent" : ""}
               >
                 {viewMode === "feed" ? (
                   <Grid className="h-5 w-5" />
+                ) : viewMode === "grid" ? (
+                  <AlignLeft className="h-5 w-5" />
                 ) : (
                   <List className="h-5 w-5" />
                 )}
@@ -150,7 +158,7 @@ export default function Home() {
               {isAuthenticated && (
                 <Button
                   onClick={() => setIsFormOpen(true)}
-                  className="bg-catppuccin-mauve text-catppuccin-base hover:bg-catppuccin-pink"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Content
@@ -165,11 +173,11 @@ export default function Home() {
             <div className="space-y-6 animate-pulse">
               {[...Array(3)].map((_, i) => (
                 <div key={i} className="space-y-4">
-                  <div className="h-6 w-32 bg-catppuccin-surface0 rounded"></div>
+                  <div className="h-6 w-32 bg-muted rounded"></div>
                   {[...Array(3)].map((_, j) => (
                     <div key={j} className="space-y-2">
-                      <div className="h-5 w-3/4 bg-catppuccin-surface0 rounded"></div>
-                      <div className="h-4 w-1/2 bg-catppuccin-surface0 rounded"></div>
+                      <div className="h-5 w-3/4 bg-muted rounded"></div>
+                      <div className="h-4 w-1/2 bg-muted rounded"></div>
                     </div>
                   ))}
                 </div>
