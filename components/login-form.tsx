@@ -12,7 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Lock, LogIn } from "lucide-react";
+import { Github, LogIn, User } from "lucide-react";
+import { generateGuestUsername, setGuestSession } from "@/lib/utils";
 
 export function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,12 +31,19 @@ export function LoginForm() {
     setIsLoading(false);
   };
 
+  const handleGuestSignIn = () => {
+    setIsLoading(true);
+    const guestUsername = generateGuestUsername();
+    setGuestSession(guestUsername);
+    router.push("/");
+  };
+
   return (
-    <Card className="w-full max-w-md mx-auto">
+    <Card className="w-full max-w-md mx-auto theme-transition">
       <CardHeader className="space-y-1">
         <CardTitle className="text-2xl text-center">login</CardTitle>
         <CardDescription className="text-center">
-          sign in to access annalhq&apos;s library
+          sign in to access the content library
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -53,7 +61,7 @@ export function LoginForm() {
 
           <Button
             variant="outline"
-            className="w-full flex items-center justify-center gap-2"
+            className="w-full flex items-center justify-center gap-2 theme-transition"
             onClick={handleGoogleSignIn}
             disabled={isLoading}
           >
@@ -89,18 +97,18 @@ export function LoginForm() {
             <span className="w-full border-t"></span>
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">
+            <span className="bg-background px-2 text-muted-foreground theme-transition">
               or continue with
             </span>
           </div>
         </div>
 
         <Button
-          className="w-full flex items-center justify-center gap-2"
-          // onClick={() => signIn("credentials", { callbackUrl: "/" })}
+          className="w-full flex items-center justify-center gap-2 theme-transition"
+          onClick={handleGuestSignIn}
           disabled={isLoading}
         >
-          <LogIn className="h-4 w-4" />
+          <User className="h-4 w-4" />
           <span>Sign in as Guest</span>
         </Button>
       </CardContent>
