@@ -195,7 +195,7 @@ export function ContentList({
                       className="flat-feed-item-url"
                     >
                       <ExternalLink className="h-3 w-3" />
-                      <span>{item.url}</span>
+                      <span className="truncate max-w-[300px]">{item.url}</span>
                     </a>
                   )}
                   <div className="flex justify-between items-center mt-2">
@@ -306,8 +306,10 @@ export function ContentList({
                 rel="noopener noreferrer"
                 className="text-primary inline-flex items-center gap-1 hover:underline text-sm mt-1"
               >
-                <ExternalLink className="h-3 w-3" />
-                <span className="truncate max-w-[300px]">{item.url}</span>
+                <ExternalLink className="h-3 w-3 flex-shrink-0" />
+                <span className="truncate max-w-[300px] inline-block">
+                  {item.url}
+                </span>
               </a>
             )}
           </CardContent>
