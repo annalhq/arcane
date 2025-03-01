@@ -126,7 +126,7 @@ export default function Home() {
       >
         <header className="border-b sticky top-0 bg-background z-10 theme-transition">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ml-10 lg:ml-0">
               <h1 className="text-xl font-medium">arcane</h1>
             </div>
 
@@ -180,32 +180,34 @@ export default function Home() {
             <ContentList
               initialContent={content}
               tags={tags}
-              onEdit={handleEditContent}
+              onEdit={isAuthenticated ? handleEditContent : undefined}
               viewMode={viewMode}
             />
           )}
         </main>
       </div>
 
-      <ContentForm
-        isOpen={isFormOpen}
-        onClose={() => {
-          setIsFormOpen(false);
-          setEditingContent(undefined);
-        }}
-        onSave={
-          editingContent
-            ? (data) =>
-                handleUpdateContent({
-                  ...data,
-                  id: editingContent.id,
-                  createdAt: editingContent.createdAt,
-                })
-            : handleAddContent
-        }
-        content={editingContent}
-        tags={tags}
-      />
+      {isAuthenticated && (
+        <ContentForm
+          isOpen={isFormOpen}
+          onClose={() => {
+            setIsFormOpen(false);
+            setEditingContent(undefined);
+          }}
+          onSave={
+            editingContent
+              ? (data) =>
+                  handleUpdateContent({
+                    ...data,
+                    id: editingContent.id,
+                    createdAt: editingContent.createdAt,
+                  })
+              : handleAddContent
+          }
+          content={editingContent}
+          tags={tags}
+        />
+      )}
     </div>
   );
 }
