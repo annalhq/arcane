@@ -81,7 +81,7 @@ export default function SearchPage() {
 
     setSelectedTags(newSelectedTags);
 
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
     params.delete("tags");
     newSelectedTags.forEach((tag) => {
       params.append("tags", tag);
@@ -93,7 +93,7 @@ export default function SearchPage() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
 
     if (searchQuery) {
       params.set("query", searchQuery);
@@ -106,7 +106,7 @@ export default function SearchPage() {
 
   const clearSearch = () => {
     setSearchQuery("");
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
     params.delete("query");
     router.push(`/search?${params.toString()}`);
   };
