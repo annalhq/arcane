@@ -185,7 +185,7 @@ export default function SettingsPage() {
                 <CardHeader>
                   <CardTitle>About</CardTitle>
                   <CardDescription>
-                    Information about the application
+                    made with ❤️ by annalhq
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">

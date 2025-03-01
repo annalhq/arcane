@@ -11,7 +11,7 @@
   },
   {
     "id": "reinforcement-learning",
-    "name": "Reinforcement Learning",
+    "name": "RL",
     "parentId": "deep-learning",
     "description": "Resources for reinforcement learning"
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import {
   ChevronRight,
@@ -65,12 +65,16 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   }, []);
 
   // Load sidebar state from localStorage
+  const initialLoadRef = useRef(false);
   useEffect(() => {
-    const savedState = getSidebarState();
-    if (savedState !== isOpen) {
-      onToggle();
+    if (!initialLoadRef.current) {
+      const savedState = getSidebarState();
+      if (savedState !== isOpen) {
+        onToggle();
+      }
+      initialLoadRef.current = true;
     }
-  }, []);
+  }, [isOpen, onToggle]);
 
   // Save sidebar state to localStorage when it changes
   useEffect(() => {
@@ -425,3 +429,4 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
     </div>
   );
 }
+

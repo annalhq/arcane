@@ -91,12 +91,18 @@ export function setSidebarState(isOpen: boolean): void {
 export function generateGuestUsername(): string {
   const adjectives = [
     'Happy', 'Clever', 'Brave', 'Calm', 'Eager',
-    'Gentle', 'Jolly', 'Kind', 'Lively', 'Proud'
+    'Gentle', 'Jolly', 'Kind', 'Lively', 'Proud',
+    'Swift', 'Bright', 'Witty', 'Noble', 'Quick',
+    'Wise', 'Bold', 'Sharp', 'Smart', 'Agile',
+    'Daring', 'Mighty', 'Sleek', 'Funny', 'Cosmic'
   ];
 
   const nouns = [
     'Panda', 'Tiger', 'Eagle', 'Dolphin', 'Fox',
-    'Rabbit', 'Wolf', 'Hawk', 'Bear', 'Lion'
+    'Rabbit', 'Wolf', 'Hawk', 'Bear', 'Lion',
+    'Owl', 'Falcon', 'Lynx', 'Jaguar', 'Koala',
+    'Raven', 'Leopard', 'Phoenix', 'Dragon', 'Shark',
+    'Badger', 'Cobra', 'Gazelle', 'Condor', 'Panther'
   ];
 
   const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
