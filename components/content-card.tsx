@@ -35,7 +35,7 @@ export function ContentCard({
 
   return (
     <Card
-      className="h-full flex flex-col transition-all duration-200 shadow-subtle hover:shadow-md"
+      className="h-full flex flex-col transition-all duration-200 shadow-subtle hover:shadow-md theme-transition"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
