@@ -1,30 +1,41 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Tag } from "@/components/tag"
-import { Content as ContentType, Tag as TagType } from "@/types"
-import { Star, ExternalLink, Edit, Trash2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { formatDate } from "@/lib/utils"
-import { cn } from "@/lib/utils"
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Tag } from "@/components/tag";
+import { Content as ContentType, Tag as TagType } from "@/types";
+import { Star, ExternalLink, Edit, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { formatDate } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface ContentCardProps {
-  content: ContentType
-  tags: TagType[]
-  onEdit: (content: ContentType) => void
-  onDelete: (id: string) => void
-  onToggleStar: (id: string) => void
+  content: ContentType;
+  tags: TagType[];
+  onEdit: (content: ContentType) => void;
+  onDelete: (id: string) => void;
+  onToggleStar: (id: string) => void;
 }
 
-export function ContentCard({ content, tags, onEdit, onDelete, onToggleStar }: ContentCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
-  
-  const contentTags = tags.filter(tag => content.tags.includes(tag.name))
-  
+export function ContentCard({
+  content,
+  tags,
+  onEdit,
+  onDelete,
+  onToggleStar,
+}: ContentCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const contentTags = tags.filter((tag) => content.tags.includes(tag.name));
+
   return (
-    <Card 
-      className="h-full flex flex-col transition-all duration-200 hover:shadow-md"
+    <Card
+      className="h-full flex flex-col transition-all duration-200 shadow-subtle hover:shadow-md"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -42,7 +53,10 @@ export function ContentCard({ content, tags, onEdit, onDelete, onToggleStar }: C
             onClick={() => onToggleStar(content.id)}
             aria-label={content.starred ? "Unstar" : "Star"}
           >
-            <Star className="h-4 w-4" fill={content.starred ? "currentColor" : "none"} />
+            <Star
+              className="h-4 w-4"
+              fill={content.starred ? "currentColor" : "none"}
+            />
           </Button>
         </div>
         <p className="text-xs text-muted-foreground">
@@ -50,13 +64,15 @@ export function ContentCard({ content, tags, onEdit, onDelete, onToggleStar }: C
         </p>
       </CardHeader>
       <CardContent className="pb-2 flex-grow">
-        <p className="text-sm text-muted-foreground mb-4">{content.description}</p>
+        <p className="text-sm text-muted-foreground mb-4">
+          {content.description}
+        </p>
         {content.url && (
-          <a 
+          <a
             href={content.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-primary inline-flex items-center gap-1 hover:underline mb-2"
+            className="text-primary inline-flex items-center gap-1 hover:underline mb-2"
           >
             <ExternalLink className="h-3 w-3" />
             <span className="truncate max-w-[200px]">{content.url}</span>
@@ -65,26 +81,28 @@ export function ContentCard({ content, tags, onEdit, onDelete, onToggleStar }: C
       </CardContent>
       <CardFooter className="flex flex-col items-start pt-0">
         <div className="flex flex-wrap gap-1 mb-2">
-          {contentTags.map(tag => (
+          {contentTags.map((tag) => (
             <Tag key={tag.name} tag={tag} />
           ))}
         </div>
-        <div className={cn(
-          "flex gap-2 w-full justify-end transition-opacity",
-          isHovered ? "opacity-100" : "opacity-0"
-        )}>
-          <Button 
-            variant="ghost" 
-            size="icon" 
+        <div
+          className={cn(
+            "flex gap-2 w-full justify-end transition-opacity",
+            isHovered ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <Button
+            variant="ghost"
+            size="icon"
             className="h-8 w-8"
             onClick={() => onEdit(content)}
             aria-label="Edit"
           >
             <Edit className="h-4 w-4" />
           </Button>
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <Button
+            variant="ghost"
+            size="icon"
             className="h-8 w-8 text-destructive"
             onClick={() => onDelete(content.id)}
             aria-label="Delete"
@@ -94,5 +112,5 @@ export function ContentCard({ content, tags, onEdit, onDelete, onToggleStar }: C
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
