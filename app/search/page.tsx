@@ -121,7 +121,7 @@ export default function SearchPage() {
 
       <div
         className={`transition-all duration-200 ${
-          isSidebarOpen ? "lg:ml-64" : "ml-0"
+          isSidebarOpen ? "lg:ml-64" : "ml-0 lg:ml-16"
         }`}
       >
         <header className="border-b sticky top-0 bg-background z-10">
