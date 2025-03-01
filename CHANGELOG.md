@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/annalhq/arcane/compare/v0.2.0...v0.1.0) (2025-03-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* major changes
+
+### Features
+
+* major changes ([f6f6c04](https://github.com/annalhq/arcane/commit/f6f6c044a80517c383dfb57714bcf0811b4f61b6))
+
 ## 0.2.0 (2025-03-01)
 
 
