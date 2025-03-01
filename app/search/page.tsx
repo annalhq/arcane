@@ -18,7 +18,7 @@ export default function SearchPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  
+
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -26,10 +26,10 @@ export default function SearchPage() {
     const query = searchParams.get("query") || "";
     const tagParams = searchParams.getAll("tags");
     const collection = searchParams.get("collection");
-    
+
     setSearchQuery(query);
     setSelectedTags(tagParams);
-    
+
     const fetchData = async () => {
       setIsLoading(true);
       try {
@@ -39,21 +39,21 @@ export default function SearchPage() {
           const tagsData = await tagsResponse.json();
           setTags(tagsData);
         }
-        
+
         // Build search URL
         const searchUrl = new URL("/api/search", window.location.origin);
         if (query) {
           searchUrl.searchParams.append("query", query);
         }
-        
-        tagParams.forEach(tag => {
+
+        tagParams.forEach((tag) => {
           searchUrl.searchParams.append("tags", tag);
         });
-        
+
         if (collection) {
           searchUrl.searchParams.append("collectionId", collection);
         }
-        
+
         // Fetch search results
         const contentResponse = await fetch(searchUrl.toString());
         if (contentResponse.ok) {
@@ -76,31 +76,31 @@ export default function SearchPage() {
 
   const handleTagSelect = (tagName: string) => {
     const newSelectedTags = selectedTags.includes(tagName)
-      ? selectedTags.filter(t => t !== tagName)
+      ? selectedTags.filter((t) => t !== tagName)
       : [...selectedTags, tagName];
-    
+
     setSelectedTags(newSelectedTags);
-    
+
     const params = new URLSearchParams(searchParams);
     params.delete("tags");
-    newSelectedTags.forEach(tag => {
+    newSelectedTags.forEach((tag) => {
       params.append("tags", tag);
     });
-    
+
     router.push(`/search?${params.toString()}`);
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const params = new URLSearchParams(searchParams);
-    
+
     if (searchQuery) {
       params.set("query", searchQuery);
     } else {
       params.delete("query");
     }
-    
+
     router.push(`/search?${params.toString()}`);
   };
 
@@ -118,14 +118,15 @@ export default function SearchPage() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
-      
-      <div className={`transition-all duration-200 ${isSidebarOpen ? "lg:ml-64" : "ml-0"}`}>
+
+      <div
+        className={`transition-all duration-200 ${
+          isSidebarOpen ? "lg:ml-64" : "ml-0"
+        }`}
+      >
         <header className="border-b sticky top-0 bg-background z-10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Toggle sidebar">
-                <Menu className="h-5 w-5" />
-              </Button>
+            <div className="flex items-center gap-2 ml-10 lg:ml-0">
               <h1 className="text-xl font-medium">Search</h1>
             </div>
 
@@ -162,7 +163,7 @@ export default function SearchPage() {
                 Search
               </Button>
             </form>
-            
+
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <TagComponent
@@ -173,19 +174,15 @@ export default function SearchPage() {
                 />
               ))}
             </div>
-            
+
             {(searchQuery || selectedTags.length > 0) && (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={clearAllFilters}
-              >
+              <Button variant="outline" size="sm" onClick={clearAllFilters}>
                 <X className="h-4 w-4 mr-1" />
                 Clear all filters
               </Button>
             )}
           </div>
-          
+
           {isLoading ? (
             <div className="space-y-6 animate-pulse">
               {[...Array(3)].map((_, i) => (
@@ -205,7 +202,9 @@ export default function SearchPage() {
           ) : (
             <div className="text-center py-12">
               <p className="text-muted-foreground mb-2">No results found</p>
-              <p className="text-sm text-muted-foreground">Try adjusting your search or filters</p>
+              <p className="text-sm text-muted-foreground">
+                Try adjusting your search or filters
+              </p>
             </div>
           )}
         </main>
