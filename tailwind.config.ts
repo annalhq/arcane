@@ -60,6 +60,28 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        // Catppuccin Mocha Theme Colors
+        catppuccin: {
+          crust: '#11111b',
+          mantle: '#181825',
+          base: '#1e1e2e',
+          surface0: '#313244',
+          surface1: '#45475a',
+          surface2: '#585b70',
+          overlay0: '#6c7086',
+          overlay1: '#7f849c',
+          overlay2: '#9399b2',
+          text: '#cdd6f4',
+          subtext0: '#a6adc8',
+          subtext1: '#bac2de',
+          mauve: '#cba6f7',
+          blue: '#89b4fa',
+          pink: '#f5c2e7',
+          green: '#a6e3a1',
+        },
+      },
+      boxShadow: {
+        'subtle': '0 2px 4px rgba(17, 17, 27, 0.1)',
       },
       keyframes: {
         'accordion-down': {

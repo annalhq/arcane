@@ -172,6 +172,6 @@ export default function EditContentPage({ params }: { params: { id: string } }) 
     }
   };
 
-  if (status === "loading" || status === "una
-  )
+  if (status === "loading" || status === "unauthenticated")
+    return null;
 }
