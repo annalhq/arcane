@@ -45,27 +45,28 @@
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    /* Catppuccin Mocha Theme */
+    --background: 231 15% 15%;
+    --foreground: 227 70% 87%;
+    --card: 231 15% 15%;
+    --card-foreground: 227 70% 87%;
+    --popover: 231 15% 15%;
+    --popover-foreground: 227 70% 87%;
+    --primary: 267 84% 81%;
+    --primary-foreground: 231 15% 15%;
+    --secondary: 231 11% 28%;
+    --secondary-foreground: 227 70% 87%;
+    --muted: 231 11% 28%;
+    --muted-foreground: 224 16% 76%;
+    --accent: 231 11% 28%;
+    --accent-foreground: 227 70% 87%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
+    --destructive-foreground: 227 70% 87%;
+    --border: 231 11% 28%;
+    --input: 231 11% 28%;
+    --ring: 267 84% 81%;
+    --chart-1: 217 92% 76%;
+    --chart-2: 160 84% 39%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
@@ -79,4 +80,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom transitions */
+.sidebar-transition {
+  transition: transform 0.3s ease, margin-left 0.3s ease;
+}
+
+/* Grid view styles */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Feed view styles */
+.content-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content-feed-item {
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(17, 17, 27, 0.1);
+  transition: all 0.2s ease;
+}
+
+.content-feed-item:hover {
+  box-shadow: 0 4px 8px rgba(17, 17, 27, 0.15);
 }
