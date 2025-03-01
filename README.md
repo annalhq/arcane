@@ -20,13 +20,13 @@
 - Guest auth with view only mode
 - 3 viewing mode
 - Advanced search functionality
-
+        
 ### Screenshots
 
 | List (dark mode) <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/collection-list.png?raw=true" width="400" />                    | List (light mode) <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/light-mode.png?raw=true" width="400" /> |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Admin login <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/sign-in.png?raw=true" width="400" />                     | Guest login <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/guest-login.png?raw=true" width="400" />                |
-| Search <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/settings.png?raw=true" width="500" /> | Markdown view <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/markdown-view.png?raw=true" width="400" />             |
+| Search <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/search.png?raw=true" width="500" /> | Markdown view <br/> <img src="https://raw.githubusercontent.com/annalhq/arcane/main/screens/markdown-view.png?raw=true" width="400" />             |
 
 
 ### Docs
