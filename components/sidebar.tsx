@@ -13,14 +13,16 @@ import {
   Plus,
   Settings,
   Menu,
+  ChevronLeft,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Collection, Tag as TagType } from "@/types";
-import { cn } from "@/lib/utils";
+import { cn, getSidebarState, setSidebarState } from "@/lib/utils";
 import { useSession } from "next-auth/react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { getGuestSession } from "@/lib/utils";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -46,7 +48,8 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const router = useRouter();
   const pathname = usePathname();
   const { data: session } = useSession();
-  const isAuthenticated = !!session;
+  const guestSession = getGuestSession();
+  const isAuthenticated = !!session || guestSession.isAuthenticated;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -60,6 +63,19 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
+
+  // Load sidebar state from localStorage
+  useEffect(() => {
+    const savedState = getSidebarState();
+    if (savedState !== isOpen) {
+      onToggle();
+    }
+  }, []);
+
+  // Save sidebar state to localStorage when it changes
+  useEffect(() => {
+    setSidebarState(isOpen);
+  }, [isOpen]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -163,10 +179,10 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   };
 
   const sidebarContent = (
-    <div className="flex h-full flex-col overflow-y-auto p-4 bg-catppuccin-base text-catppuccin-text">
+    <div className="flex h-full flex-col overflow-y-auto p-4 bg-background text-foreground theme-transition">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold">Content Library</h2>
-        {isMobile && (
+        {isMobile ? (
           <Button
             variant="ghost"
             size="icon"
@@ -174,6 +190,16 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
             className="lg:hidden"
           >
             <X className="h-5 w-5" />
+          </Button>
+        ) : (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onToggle}
+            className="hidden lg:flex"
+            aria-label="Toggle sidebar"
+          >
+            <ChevronLeft className="h-5 w-5" />
           </Button>
         )}
       </div>
@@ -185,7 +211,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
             placeholder="Search..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="h-8 bg-catppuccin-mantle border-catppuccin-surface0"
+            className="h-8"
           />
           <Button size="sm" variant="ghost" onClick={handleSearch}>
             <Search className="h-4 w-4" />
@@ -216,10 +242,10 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
               key={tag.name}
               onClick={() => handleTagSelect(tag.name)}
               className={cn(
-                "flex w-full items-center rounded-md px-2 py-1 text-sm transition-colors",
+                "flex w-full items-center rounded-md px-2 py-1 text-sm transition-colors theme-transition",
                 selectedTags.includes(tag.name)
-                  ? "bg-catppuccin-surface1 text-catppuccin-text"
-                  : "hover:bg-catppuccin-surface0"
+                  ? "bg-accent text-accent-foreground"
+                  : "hover:bg-muted"
               )}
             >
               <Tag className="mr-2 h-4 w-4" style={{ color: tag.color }} />
@@ -229,7 +255,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         </div>
       </div>
 
-      <Separator className="my-4 bg-catppuccin-surface0" />
+      <Separator className="my-4" />
 
       {/* Collections Section */}
       <div className="mb-6">
@@ -254,7 +280,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                 <div className="flex items-center">
                   <button
                     onClick={() => toggleCollectionExpand(collection.id)}
-                    className="mr-1 p-1 hover:bg-catppuccin-surface0 rounded-md"
+                    className="mr-1 p-1 hover:bg-muted rounded-md"
                   >
                     {expandedCollections[collection.id] ? (
                       <ChevronDown className="h-4 w-4" />
@@ -265,16 +291,16 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                   <button
                     onClick={() => handleCollectionSelect(collection.id)}
                     className={cn(
-                      "flex flex-1 items-center rounded-md px-2 py-1 text-sm transition-colors",
+                      "flex flex-1 items-center rounded-md px-2 py-1 text-sm transition-colors theme-transition",
                       selectedCollection === collection.id
-                        ? "bg-catppuccin-surface1 text-catppuccin-text"
-                        : "hover:bg-catppuccin-surface0"
+                        ? "bg-accent text-accent-foreground"
+                        : "hover:bg-muted"
                     )}
                   >
                     {expandedCollections[collection.id] ? (
-                      <FolderOpen className="mr-2 h-4 w-4 text-catppuccin-blue" />
+                      <FolderOpen className="mr-2 h-4 w-4 text-primary" />
                     ) : (
-                      <Folder className="mr-2 h-4 w-4 text-catppuccin-blue" />
+                      <Folder className="mr-2 h-4 w-4 text-primary" />
                     )}
                     <span>{collection.name}</span>
                   </button>
@@ -288,13 +314,13 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                           key={child.id}
                           onClick={() => handleCollectionSelect(child.id)}
                           className={cn(
-                            "flex w-full items-center rounded-md px-2 py-1 text-sm transition-colors",
+                            "flex w-full items-center rounded-md px-2 py-1 text-sm transition-colors theme-transition",
                             selectedCollection === child.id
-                              ? "bg-catppuccin-surface1 text-catppuccin-text"
-                              : "hover:bg-catppuccin-surface0"
+                              ? "bg-accent text-accent-foreground"
+                              : "hover:bg-muted"
                           )}
                         >
-                          <Folder className="mr-2 h-4 w-4 text-catppuccin-blue" />
+                          <Folder className="mr-2 h-4 w-4 text-primary" />
                           <span>{child.name}</span>
                         </button>
                       ))}
@@ -309,7 +335,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         {isAuthenticated && (
           <Button
             variant="outline"
-            className="w-full mb-2 bg-catppuccin-mauve text-catppuccin-base hover:bg-catppuccin-pink hover:text-catppuccin-base"
+            className="w-full mb-2 bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={handleAddContent}
           >
             <Plus className="mr-2 h-4 w-4" />
@@ -343,10 +369,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         </Button>
 
         <Sheet open={isOpen} onOpenChange={onToggle}>
-          <SheetContent
-            side="left"
-            className="p-0 w-[280px] border-r border-catppuccin-surface0"
-          >
+          <SheetContent side="left" className="p-0 w-[280px] border-r">
             {sidebarContent}
           </SheetContent>
         </Sheet>
@@ -357,11 +380,57 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   return (
     <div
       className={cn(
-        "fixed left-0 top-0 z-40 h-full w-64 transform bg-catppuccin-base border-r border-catppuccin-surface0 sidebar-transition",
-        isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+        "fixed left-0 top-0 z-40 h-full w-64 transform bg-background border-r sidebar-transition theme-transition",
+        isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0 lg:w-16"
       )}
     >
-      {sidebarContent}
+      {isOpen ? (
+        sidebarContent
+      ) : (
+        <div className="p-4 flex flex-col h-full">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onToggle}
+            className="mb-6 self-end"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
+          <div className="flex flex-col items-center gap-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.push("/")}
+            >
+              <Folder className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.push("/search")}
+            >
+              <Search className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.push("/settings")}
+            >
+              <Settings className="h-5 w-5" />
+            </Button>
+          </div>
+          {isAuthenticated && (
+            <Button
+              variant="outline"
+              size="icon"
+              className="mt-auto mb-4 self-center"
+              onClick={handleAddContent}
+            >
+              <Plus className="h-5 w-5" />
+            </Button>
+          )}
+        </div>
+      )}
     </div>
   );
 }
