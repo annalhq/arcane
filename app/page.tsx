@@ -17,9 +17,11 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [editingContent, setEditingContent] = useState<Content | undefined>(undefined);
+  const [editingContent, setEditingContent] = useState<Content | undefined>(
+    undefined
+  );
   const [viewMode, setViewMode] = useState<"feed" | "grid">("feed");
-  
+
   const router = useRouter();
   const { data: session } = useSession();
   const isAuthenticated = !!session;
@@ -50,7 +52,9 @@ export default function Home() {
     fetchData();
   }, []);
 
-  const handleAddContent = async (newContent: Omit<Content, "id" | "createdAt">) => {
+  const handleAddContent = async (
+    newContent: Omit<Content, "id" | "createdAt">
+  ) => {
     try {
       const response = await fetch("/api/content", {
         method: "POST",
@@ -104,31 +108,50 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-catppuccin-base text-catppuccin-text">
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
-      
-      <div className={`transition-all duration-200 ${isSidebarOpen ? "lg:ml-64" : "ml-0"}`}>
-        <header className="border-b sticky top-0 bg-background z-10">
+
+      <div
+        className={`transition-all duration-200 ${
+          isSidebarOpen ? "lg:ml-64" : "ml-0"
+        }`}
+      >
+        <header className="border-b border-catppuccin-surface0 sticky top-0 bg-catppuccin-base z-10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Toggle sidebar">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleSidebar}
+                aria-label="Toggle sidebar"
+              >
                 <Menu className="h-5 w-5" />
               </Button>
               <h1 className="text-xl font-medium">Content Library</h1>
             </div>
 
             <div className="flex items-center gap-2">
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 onClick={toggleViewMode}
-                aria-label={`Switch to ${viewMode === "feed" ? "grid" : "feed"} view`}
+                aria-label={`Switch to ${
+                  viewMode === "feed" ? "grid" : "feed"
+                } view`}
+                className={viewMode === "grid" ? "bg-catppuccin-surface0" : ""}
               >
-                {viewMode === "feed" ? <Grid className="h-5 w-5" /> : <List className="h-5 w-5" />}
+                {viewMode === "feed" ? (
+                  <Grid className="h-5 w-5" />
+                ) : (
+                  <List className="h-5 w-5" />
+                )}
               </Button>
               <ThemeToggle />
               {isAuthenticated && (
-                <Button onClick={() => setIsFormOpen(true)}>
+                <Button
+                  onClick={() => setIsFormOpen(true)}
+                  className="bg-catppuccin-mauve text-catppuccin-base hover:bg-catppuccin-pink"
+                >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Content
                 </Button>
@@ -142,21 +165,22 @@ export default function Home() {
             <div className="space-y-6 animate-pulse">
               {[...Array(3)].map((_, i) => (
                 <div key={i} className="space-y-4">
-                  <div className="h-6 w-32 bg-muted rounded"></div>
+                  <div className="h-6 w-32 bg-catppuccin-surface0 rounded"></div>
                   {[...Array(3)].map((_, j) => (
                     <div key={j} className="space-y-2">
-                      <div className="h-5 w-3/4 bg-muted rounded"></div>
-                      <div className="h-4 w-1/2 bg-muted rounded"></div>
+                      <div className="h-5 w-3/4 bg-catppuccin-surface0 rounded"></div>
+                      <div className="h-4 w-1/2 bg-catppuccin-surface0 rounded"></div>
                     </div>
                   ))}
                 </div>
               ))}
             </div>
           ) : (
-            <ContentList 
-              initialContent={content} 
-              tags={tags} 
+            <ContentList
+              initialContent={content}
+              tags={tags}
               onEdit={handleEditContent}
+              viewMode={viewMode}
             />
           )}
         </main>
