@@ -13,13 +13,14 @@ import {
 import { formatDate } from "@/lib/utils";
 import { useSession } from "next-auth/react";
 import { ContentCard } from "@/components/content-card";
+import { getGuestSession } from "@/lib/utils";
 
 interface ContentListProps {
   initialContent?: Content[];
   tags: Tag[];
   onEdit?: (content: Content) => void;
   onDelete?: (id: string) => void;
-  viewMode?: "feed" | "grid";
+  viewMode?: "feed" | "grid" | "flat";
 }
 
 export function ContentList({
@@ -31,13 +32,34 @@ export function ContentList({
 }: ContentListProps) {
   const [content, setContent] = useState<Content[]>(initialContent || []);
   const [isLoading, setIsLoading] = useState(!initialContent);
+  const [groupedByTag, setGroupedByTag] = useState<Record<string, Content[]>>(
+    {}
+  );
 
   const { data: session } = useSession();
-  const isAuthenticated = !!session;
+  const guestSession = getGuestSession();
+  const isAuthenticated = !!session || guestSession.isAuthenticated;
 
   useEffect(() => {
     if (initialContent) {
       setContent(initialContent);
+
+      // Group content by tags for flat view
+      if (viewMode === "flat") {
+        const grouped: Record<string, Content[]> = {};
+        initialContent.forEach((item) => {
+          item.tags.forEach((tag) => {
+            if (!grouped[tag]) {
+              grouped[tag] = [];
+            }
+            if (!grouped[tag].find((c) => c.id === item.id)) {
+              grouped[tag].push(item);
+            }
+          });
+        });
+        setGroupedByTag(grouped);
+      }
+
       return;
     }
 
@@ -48,6 +70,22 @@ export function ContentList({
         if (response.ok) {
           const data = await response.json();
           setContent(data);
+
+          // Group content by tags for flat view
+          if (viewMode === "flat") {
+            const grouped: Record<string, Content[]> = {};
+            data.forEach((item: Content) => {
+              item.tags.forEach((tag) => {
+                if (!grouped[tag]) {
+                  grouped[tag] = [];
+                }
+                if (!grouped[tag].find((c) => c.id === item.id)) {
+                  grouped[tag].push(item);
+                }
+              });
+            });
+            setGroupedByTag(grouped);
+          }
         }
       } catch (error) {
         console.error("Error fetching content:", error);
@@ -57,7 +95,7 @@ export function ContentList({
     };
 
     fetchContent();
-  }, [initialContent]);
+  }, [initialContent, viewMode]);
 
   const handleDelete = async (id: string) => {
     if (!isAuthenticated) return;
@@ -127,6 +165,89 @@ export function ContentList({
     );
   }
 
+  if (viewMode === "flat") {
+    return (
+      <div className="space-y-8">
+        {Object.entries(groupedByTag).map(([tag, items]) => (
+          <div key={tag} className="space-y-2">
+            <h2 className="text-lg font-semibold flex items-center">
+              <span
+                className="w-3 h-3 rounded-full mr-2"
+                style={{
+                  backgroundColor:
+                    tags.find((t) => t.name === tag)?.color || "#ccc",
+                }}
+              ></span>
+              {tag}
+            </h2>
+            <div className="space-y-1 pl-5">
+              {items.map((item) => (
+                <div key={item.id} className="flat-feed-item">
+                  <h3 className="flat-feed-item-title">{item.title}</h3>
+                  <p className="flat-feed-item-description">
+                    {item.description}
+                  </p>
+                  {item.url && (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flat-feed-item-url"
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                      <span>{item.url}</span>
+                    </a>
+                  )}
+                  <div className="flex justify-between items-center mt-2">
+                    <span className="text-xs text-muted-foreground">
+                      {formatDate(item.createdAt)}
+                    </span>
+                    {isAuthenticated && (
+                      <div className="flex gap-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-7 px-2"
+                          onClick={() => handleToggleStar(item.id)}
+                        >
+                          <Star
+                            className={`h-4 w-4 ${
+                              item.starred
+                                ? "fill-yellow-500 text-yellow-500"
+                                : ""
+                            }`}
+                          />
+                        </Button>
+                        {onEdit && (
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-7 px-2"
+                            onClick={() => onEdit(item)}
+                          >
+                            <Edit className="h-4 w-4" />
+                          </Button>
+                        )}
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-7 px-2 text-destructive"
+                          onClick={() => handleDelete(item.id)}
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   if (viewMode === "grid") {
     return (
       <div className="content-grid">
@@ -147,7 +268,7 @@ export function ContentList({
   return (
     <div className="content-feed">
       {content.map((item) => (
-        <Card key={item.id} className="content-feed-item">
+        <Card key={item.id} className="content-feed-item theme-transition">
           <CardHeader className="pb-2 relative">
             <div className="flex items-start justify-between">
               <h3 className="text-lg font-medium leading-tight">
