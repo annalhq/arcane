@@ -181,17 +181,8 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const sidebarContent = (
     <div className="flex h-full flex-col overflow-y-auto p-4 bg-background text-foreground theme-transition">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-semibold">Content Library</h2>
-        {isMobile ? (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onToggle}
-            className="lg:hidden"
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        ) : (
+        <h2 className="text-lg font-semibold">menu</h2>
+        {!isMobile && (
           <Button
             variant="ghost"
             size="icon"

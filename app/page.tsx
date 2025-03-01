@@ -8,7 +8,7 @@ import { Sidebar } from "@/components/sidebar";
 import { ContentForm } from "@/components/content-form";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { Menu, Plus, List, Grid, AlignLeft } from "lucide-react";
+import { Plus, List, Grid, AlignLeft } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { getGuestSession } from "@/lib/utils";
 
@@ -127,15 +127,7 @@ export default function Home() {
         <header className="border-b sticky top-0 bg-background z-10 theme-transition">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleSidebar}
-                aria-label="Toggle sidebar"
-              >
-                <Menu className="h-5 w-5" />
-              </Button>
-              <h1 className="text-xl font-medium">Content Library</h1>
+              <h1 className="text-xl font-medium">arcane</h1>
             </div>
 
             <div className="flex items-center gap-2">
@@ -158,10 +150,11 @@ export default function Home() {
               {isAuthenticated && (
                 <Button
                   onClick={() => setIsFormOpen(true)}
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  size="icon"
+                  className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  aria-label="Add new content"
                 >
-                  <Plus className="h-4 w-4 mr-2" />
-                  Add Content
+                  <Plus className="h-5 w-5" />
                 </Button>
               )}
             </div>

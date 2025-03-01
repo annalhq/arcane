@@ -79,7 +79,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Remove transition delay for theme changes */
+    transition: none;
   }
 }
 
@@ -182,9 +183,10 @@
 
 /* Theme transition effects */
 .theme-transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+  transition-duration: 0ms; /* Changed from 300ms to 0ms */
 }
 
 /* Flat feed view */
