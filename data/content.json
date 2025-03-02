@@ -36,5 +36,65 @@
     "starred": true,
     "tags": ["ml"],
     "collectionId": "deep-learning"
+  },
+  {
+    "id": "5",
+    "title": "Deep Learning", 
+    "description": "Ian Goodfellow, Yoshua Bengio and Aaron Courville",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://www.deeplearningbook.org/",
+    "starred": true,
+    "tags": ["ml"],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "6",
+    "title": "Deep RL", 
+    "description": "OpenAI RL docs",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://spinningup.openai.com/en/latest/",
+    "starred": true,
+    "tags": ["ml"],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "7",
+    "title": "Deep Learning", 
+    "description": "Ian Goodfellow, Yoshua Bengio and Aaron Courville",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://www.deeplearningbook.org/",
+    "starred": true,
+    "tags": ["ml"],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "8",
+    "title": "Understanding Deep Learning", 
+    "description": "A book by Simon J. D. Prince",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://udlbook.github.io/udlbook/",
+    "starred": true,
+    "tags": ["ml"],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "9",
+    "title": "WQS Binary Search Optimization", 
+    "description": "Blog on Aliens Trick",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://robert1003.github.io/2020/02/26/dp-opt-wqs-binary-search.html",
+    "starred": true,
+    "tags": ["programming"],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "10",
+    "title": "LLM visualization", 
+    "description": "Nice visualization by Brendan Bycroft",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "url": "https://bbycroft.net/llm",
+    "starred": false,
+    "tags": ["ml"],
+    "collectionId": "deep-learning"
   }
 ]

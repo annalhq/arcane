@@ -16,9 +16,8 @@
     "description": "Resources for reinforcement learning"
   },
   {
-    "id": "computer-vision",
-    "name": "Computer Vision",
-    "parentId": "deep-learning",
-    "description": "Computer vision resources"
+    "id": "programming",
+    "name": "Programming",
+    "description": "competitive programming"
   }
 ]
