@@ -97,6 +97,10 @@ export function ContentForm({ isOpen, onClose, onSave, content, tags, collection
       newErrors.url = "Please enter a valid URL";
     }
     
+    if (selectedCollection === "__NONE__") {
+      newErrors.collection = "Collection is required";
+    }
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -180,7 +184,7 @@ export function ContentForm({ isOpen, onClose, onSave, content, tags, collection
                 <SelectValue placeholder="Select a collection" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">None</SelectItem>
+                <SelectItem value="__NONE__">None</SelectItem>
                 {allCollections.map((collection) => (
                   <SelectItem key={collection.id} value={collection.id}>
                     {collection.name}

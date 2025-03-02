@@ -169,7 +169,7 @@ export default function NewCollectionPage() {
                   <SelectValue placeholder="Select a parent collection" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">None</SelectItem>
+                  <SelectItem value="__NONE__">None</SelectItem>
                   {collections.map((collection) => (
                     <SelectItem key={collection.id} value={collection.id}>
                       {collection.name}

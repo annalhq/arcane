@@ -222,7 +222,7 @@ export function ContentForm({
                 <SelectValue placeholder="Select a collection" />
               </SelectTrigger>
               <SelectContent className="bg-catppuccin-mantle border-catppuccin-surface0 text-catppuccin-text">
-                <SelectItem value="">None</SelectItem>
+                <SelectItem value="__NONE__">None</SelectItem>
                 {allCollections.map((collection) => (
                   <SelectItem key={collection.id} value={collection.id}>
                     {collection.name}
