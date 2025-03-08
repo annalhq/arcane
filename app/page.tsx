@@ -21,7 +21,7 @@ export default function Home() {
   const [editingContent, setEditingContent] = useState<Content | undefined>(
     undefined
   );
-  const [viewMode, setViewMode] = useState<"feed" | "grid" | "flat">("feed");
+  const [viewMode, setViewMode] = useState<"flat" | "grid" | "feed">("flat");
 
   const router = useRouter();
   const { data: session } = useSession();
