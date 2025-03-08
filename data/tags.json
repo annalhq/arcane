@@ -3,5 +3,8 @@
   { "name": "maths", "color": "hsl(0, 100%, 90%)" },
   { "name": "programming", "color": "hsl(120, 100%, 90%)" },
   { "name": "lectures", "color": "hsl(270, 100%, 90%)" },
-  { "name": "yt", "color": "hsl(30, 100%, 90%)" }
+  { "name": "video", "color": "hsl(30, 100%, 90%)" },
+  { "name": "article", "color": "hsl(60, 100%, 90%)" },
+  { "name": "paper", "color": "hsl(180, 100%, 90%)" },
+  { "name": "github", "color": "hsl(240, 100%, 90%)" }
 ]

@@ -6,7 +6,9 @@
     "createdAt": "2025-02-20T10:30:00Z",
     "url": "https://hrl.boyuai.com/",
     "starred": false,
-    "tags": ["tool"],
+    "tags": [
+      "tool"
+    ],
     "collectionId": "reinforcement-learning"
   },
   {
@@ -16,7 +18,9 @@
     "createdAt": "2025-02-22T14:15:00Z",
     "url": "https://codeforces.com/blog/entry/85121",
     "starred": true,
-    "tags": ["programming"]
+    "tags": [
+      "programming"
+    ]
   },
   {
     "id": "3",
@@ -25,7 +29,9 @@
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://www.wikiwand.com/en/articles/Lempel%E2%80%93Ziv_complexity",
     "starred": true,
-    "tags": ["programming"]
+    "tags": [
+      "programming"
+    ]
   },
   {
     "id": "4",
@@ -34,67 +40,3045 @@
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://d2l.ai/",
     "starred": true,
-    "tags": ["ml"],
+    "tags": [
+      "ml"
+    ],
     "collectionId": "deep-learning"
   },
   {
     "id": "5",
-    "title": "Deep Learning", 
+    "title": "Deep Learning",
     "description": "Ian Goodfellow, Yoshua Bengio and Aaron Courville",
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://www.deeplearningbook.org/",
     "starred": true,
-    "tags": ["ml"],
+    "tags": [
+      "ml"
+    ],
     "collectionId": "deep-learning"
   },
   {
     "id": "6",
-    "title": "Deep RL", 
+    "title": "Deep RL",
     "description": "OpenAI RL docs",
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://spinningup.openai.com/en/latest/",
     "starred": true,
-    "tags": ["ml"],
+    "tags": [
+      "ml"
+    ],
     "collectionId": "reinforcement-learning"
   },
   {
     "id": "7",
-    "title": "Deep Learning", 
+    "title": "Deep Learning",
     "description": "Ian Goodfellow, Yoshua Bengio and Aaron Courville",
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://www.deeplearningbook.org/",
     "starred": true,
-    "tags": ["ml"],
+    "tags": [
+      "ml"
+    ],
     "collectionId": "deep-learning"
   },
   {
     "id": "8",
-    "title": "Understanding Deep Learning", 
+    "title": "Understanding Deep Learning",
     "description": "A book by Simon J. D. Prince",
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://udlbook.github.io/udlbook/",
     "starred": true,
-    "tags": ["ml"],
+    "tags": [
+      "ml"
+    ],
     "collectionId": "deep-learning"
   },
   {
     "id": "9",
-    "title": "WQS Binary Search Optimization", 
+    "title": "WQS Binary Search Optimization",
     "description": "Blog on Aliens Trick",
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://robert1003.github.io/2020/02/26/dp-opt-wqs-binary-search.html",
     "starred": true,
-    "tags": ["programming"],
+    "tags": [
+      "programming"
+    ],
     "collectionId": "deep-learning"
   },
   {
     "id": "10",
-    "title": "LLM visualization", 
+    "title": "LLM visualization",
     "description": "Nice visualization by Brendan Bycroft",
     "createdAt": "2025-02-25T09:00:00Z",
     "url": "https://bbycroft.net/llm",
     "starred": false,
-    "tags": ["ml"],
+    "tags": [
+      "ml"
+    ],
     "collectionId": "deep-learning"
+  },
+  {
+    "id": "harvard-annotated-transformer",
+    "title": "The Annotated Transformer",
+    "description": "The Annotated Transformer",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://nlp.seas.harvard.edu/annotated-transformer/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "harvard-first-law-of-complexodynamics",
+    "title": "The First Law of Complexodynamics",
+    "description": "The First Law of Complexodynamics",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://scottaaronson.blog/?p=762",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "karpathy-rnn-effectiveness",
+    "title": "The Unreasonable Effectiveness of RNNs",
+    "description": "The Unreasonable Effectiveness of RNNs",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "colah-lstm",
+    "title": "Understanding LSTM Networks",
+    "description": "Understanding LSTM Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "zaremba-recurrent-neural-network-regularization",
+    "title": "Recurrent Neural Network Regularization",
+    "description": "Recurrent Neural Network Regularization",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1409.2329",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "hinton-keeping-neural-networks-simple",
+    "title": "Keeping Neural Networks Simple by Minimizing the Description Length of the Weights",
+    "description": "Keeping Neural Networks Simple by Minimizing the Description Length of the Weights",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.cs.toronto.edu/~hinton/absps/colt93.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "vinyals-pointer-networks",
+    "title": "Pointer Networks",
+    "description": "Pointer Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1506.03134",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "krizhevsky-alexnet",
+    "title": "ImageNet Classification with Deep CNNs",
+    "description": "ImageNet Classification with Deep CNNs",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "vinyals-order-matters",
+    "title": "Order Matters: Sequence to sequence for sets",
+    "description": "Order Matters: Sequence to sequence for sets",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1511.06391",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "huang-gpipe",
+    "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+    "description": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1811.06965",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "he-residual-learning",
+    "title": "Deep Residual Learning for Image Recognition",
+    "description": "Deep Residual Learning for Image Recognition",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1512.03385",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "yu-multi-scale-context-aggregation",
+    "title": "Multi-Scale Context Aggregation by Dilated Convolutions",
+    "description": "Multi-Scale Context Aggregation by Dilated Convolutions",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1511.07122",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "schutt-neural-quantum-chemistry",
+    "title": "Neural Quantum Chemistry",
+    "description": "Neural Quantum Chemistry",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1704.01212",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "vaswani-attention",
+    "title": "Attention Is All You Need",
+    "description": "Attention Is All You Need",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1706.03762",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "bahdanau-machine-translation",
+    "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "description": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1409.0473",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "he-identity-mappings",
+    "title": "Identity Mappings in Deep Residual Networks",
+    "description": "Identity Mappings in Deep Residual Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1603.05027",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-simple-nn-module",
+    "title": "A Simple NN Module for Relational Reasoning",
+    "description": "A Simple NN Module for Relational Reasoning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1706.01427",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-variational-lossy-autoencoder",
+    "title": "Variational Lossy Autoencoder",
+    "description": "Variational Lossy Autoencoder",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1611.02731",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-relational-rnns",
+    "title": "Relational RNNs",
+    "description": "Relational RNNs",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1806.01822",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-coffee-automaton",
+    "title": "Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton",
+    "description": "Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1405.6903",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-neural-turing-machines",
+    "title": "Neural Turing Machines",
+    "description": "Neural Turing Machines",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1410.5401",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-deep-speech-2",
+    "title": "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin",
+    "description": "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1512.02595",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-scaling-laws",
+    "title": "Scaling Laws for Neural LMs",
+    "description": "Scaling Laws for Neural LMs",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/2001.08361",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-mdl",
+    "title": "A Tutorial Introduction to the Minimum Description Length Principle",
+    "description": "A Tutorial Introduction to the Minimum Description Length Principle",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/math/0406077",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-machine-super-intelligence",
+    "title": "Machine Super Intelligence",
+    "description": "Machine Super Intelligence",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "http://www.vetta.org/papers/Machine_Super_Intelligence.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-kolmogorov-complexity",
+    "title": "Kolmogorov Complexity and Algorithmic Randomness",
+    "description": "Kolmogorov Complexity and Algorithmic Randomness",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "santoro-cs231n",
+    "title": "CS231n Convolutional Neural Networks for Visual Recognition",
+    "description": "CS231n Convolutional Neural Networks for Visual Recognition",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs231n.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "papers-in-100-lines-of-code",
+    "title": "Papers in 100 Lines of Code",
+    "description": "Papers in 100 Lines of Code",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/MaximeVandegar/Papers-in-100-Lines-of-Code",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "math-ml-framework",
+    "title": "A Mathematical Framework for Transformer Circuits",
+    "description": "A Mathematical Framework for Transformer Circuits",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://transformer-circuits.pub/2021/framework/index.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "attention-is-all-you-need",
+    "title": "Attention Is All You Need",
+    "description": "Attention Is All You Need",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1706.03762",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "neural-networks-nlp",
+    "title": "Neural Networks and Neural Language Models",
+    "description": "Neural Networks and Neural Language Models",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/7.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "bengio2003neural",
+    "title": "A Neural Probabilistic Language Model",
+    "description": "A Neural Probabilistic Language Model",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "walt2011numpy",
+    "title": "The NumPy array: a structure for efficient numerical computation",
+    "description": "The NumPy array: a structure for efficient numerical computation",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1102.1523",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "breiman2001random",
+    "title": "Random Forests",
+    "description": "Random Forests",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://link.springer.com/content/pdf/10.1023/a:1010933404324.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "breiman-two-cultures",
+    "title": "Statistical Modeling: The Two Cultures",
+    "description": "Statistical Modeling: The Two Cultures",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www2.math.uu.se/~thulin/mm/breiman.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "llama3-herd",
+    "title": "The Llama 3 Herd of Models",
+    "description": "The Llama 3 Herd of Models",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/2407.21783",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "lecun-98",
+    "title": "Gradient-based learning applied to paper recognition",
+    "description": "Gradient-based learning applied to paper recognition",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "shannon-38",
+    "title": "A Symbolic Analysis of Relay and Switching Circuits",
+    "description": "A Symbolic Analysis of Relay and Switching Circuits",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://drive.google.com/file/d/1m3JwmCZqWg1IP607I5gbpsJDQBIDwcz9/view",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "mcculloch-pitts-43",
+    "title": "A Logical Calculus of the Ideas Immanent in Nervous Activity",
+    "description": "A Logical Calculus of the Ideas Immanent in Nervous Activity",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "turing-1948",
+    "title": "Intelligent Machinery",
+    "description": "Intelligent Machinery",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://ia801703.us.archive.org/23/items/turing1948/turing1948_text.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "lstm-1997",
+    "title": "Long Short-term Memory",
+    "description": "Long Short-term Memory",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://drive.google.com/file/d/1u4RwS5gmEB1Jk3hWcq7yU_5OxxfeqfMJ/view?usp=sharing",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "karpathy-2015",
+    "title": "VISUALIZING AND UNDERSTANDING RECURRENT NETWORKS",
+    "description": "VISUALIZING AND UNDERSTANDING RECURRENT NETWORKS",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1506.02078",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rumelhart-1986",
+    "title": "Learning representations by back-propagating errors",
+    "description": "Learning representations by back-propagating errors",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/georgezoto/Convolutional-Neural-Networks/blob/master/Papers/1986%20Backpro%20Learning%20representations%20by%20back-propagating%20errors%20-%20Rumelhart,%20Hinton,%20Williams.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "shannon-1950",
+    "title": "Programming a Computer for Playing Chess",
+    "description": "Programming a Computer for Playing Chess",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://archive.computerhistory.org/projects/chess/related_materials/text/2-0%20and%202-1.Programming_a_computer_for_playing_chess.shannon/2-0%20and%202-1.Programming_a_computer_for_playing_chess.shannon.062303002.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "rosenblatt-1957",
+    "title": "Perceptron",
+    "description": "Perceptron",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://bpb-us-e2.wpmucdn.com/websites.umass.edu/dist/a/27637/files/2016/03/rosenblatt-1957.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "shannon-1948",
+    "title": "A Mathematical Theory of Communication",
+    "description": "A Mathematical Theory of Communication",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "bahdanau-2014",
+    "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "description": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1409.0473",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "luong-2015",
+    "title": "Effective Approaches to Attention-based Neural Machine Translation",
+    "description": "Effective Approaches to Attention-based Neural Machine Translation",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1508.04025",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "sutskever-2014",
+    "title": "Sequence to Sequence Learning with Neural Networks",
+    "description": "Sequence to Sequence Learning with Neural Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1409.3215",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "shlens-2014",
+    "title": "A Tutorial on Principal Component Analysis",
+    "description": "A Tutorial on Principal Component Analysis",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1404.1100",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "devlin-2018",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "description": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1810.04805",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "badue-2020",
+    "title": "Self-Driving Cars: A Survey",
+    "description": "Self-Driving Cars: A Survey",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1901.04407",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "graves-2013",
+    "title": "Generating Sequences With Recurrent Neural Networks",
+    "description": "Generating Sequences With Recurrent Neural Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1308.0850",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "weston-2014",
+    "title": "Memory Networks",
+    "description": "Memory Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1410.3916",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "memory-bank",
+    "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+    "description": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/2305.10250",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "ruder-2016",
+    "title": "An overview of gradient descent optimization algorithms",
+    "description": "An overview of gradient descent optimization algorithms",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/1609.04747",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "rsrch.space",
+    "title": "rsrch.space",
+    "description": "rsrch.space",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://rsrch.space/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "karpathy-blog",
+    "title": "Andrej Karpathy",
+    "description": "Andrej Karpathy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://karpathy.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "lilian-blog",
+    "title": "Lilian Weng",
+    "description": "Lilian Weng",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://lilianweng.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "colah-blog",
+    "title": "Christopher Olah - colah",
+    "description": "Christopher Olah - colah",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://colah.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "huyen-blog",
+    "title": "Chip Huyen",
+    "description": "Chip Huyen",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://huyenchip.com/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "eugeneyan-blog",
+    "title": "Eugene Yan- eugeneyan",
+    "description": "Eugene Yan- eugeneyan",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://eugeneyan.com/writing/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "sebastian-blog",
+    "title": "Sebastian Raschka",
+    "description": "Sebastian Raschka",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://sebastianraschka.com/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "himanshu-blog",
+    "title": "himanshu",
+    "description": "himanshu",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://lunar-joke-35b.notion.site/Intuition-and-Insights-122ba4b6a3fa8086b561e4069da59cf4",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cneuralnetwork-blog",
+    "title": "cneuralnetwork",
+    "description": "cneuralnetwork",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cneuralnets.netlify.app/blogs",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "siboehm-blog",
+    "title": "siboehm",
+    "description": "siboehm",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://siboehm.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "matdmiller-blog",
+    "title": "Mat Miller",
+    "description": "Mat Miller",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://blog.matdmiller.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "atcold-blog",
+    "title": "Alfredo Canziani",
+    "description": "Alfredo Canziani",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://atcold.github.io/blog.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "sumit-blog",
+    "title": "sumit.ml",
+    "description": "sumit.ml",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.sumit.ml/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "maharshi-blog",
+    "title": "maharshi",
+    "description": "maharshi",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://maharshi.bearblog.dev/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "naklecha-blog",
+    "title": "naklecha",
+    "description": "naklecha",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.naklecha.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "nicholas-blog",
+    "title": "Nicholas Carlini",
+    "description": "Nicholas Carlini",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://nicholas.carlini.com/writing",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "gdb-blog",
+    "title": "Greg Brockman",
+    "description": "Greg Brockman",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://blog.gregbrockman.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "nielsen-blog",
+    "title": "Michael Nielsen",
+    "description": "Michael Nielsen",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://michaelnotebook.com/index.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "simon-blog",
+    "title": "Simon Willison",
+    "description": "Simon Willison",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://simonwillison.net/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "saurabh-blog",
+    "title": "saurabhalone",
+    "description": "saurabhalone",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://saurabhalone.com/blogs/blogs",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "hamel-blog",
+    "title": "Hamel",
+    "description": "Hamel",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://hamel.dev/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "saurabh-blog",
+    "title": "saurabh",
+    "description": "saurabh",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://saurabhai.com/blogs/blogs",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "paneer-blog",
+    "title": "paneer's blog",
+    "description": "paneer's blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://paneer.bearblog.dev/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "florian-blog",
+    "title": "Florian Hartmann",
+    "description": "Florian Hartmann",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://florian.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "leonardo-blog",
+    "title": "Leonardo Araujo Santos",
+    "description": "Leonardo Araujo Santos",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://leonardoaraujosantos.gitbook.io/artificial-inteligence",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "alexandru-blog",
+    "title": "Alexandru Burlacu",
+    "description": "Alexandru Burlacu",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://alexandruburlacu.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "victor-blog",
+    "title": "Victor Zhou",
+    "description": "Victor Zhou",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://victorzhou.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "yash-blog",
+    "title": "Yash Shah",
+    "description": "Yash Shah",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://yashshahh.notion.site/Applied-AI-Resources-7c1d4e6dc38f4964874e2fece1705a13",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "denny-blog",
+    "title": "Denny Britz",
+    "description": "Denny Britz",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://dennybritz.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "bair-blog",
+    "title": "bair blog",
+    "description": "bair blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://bair.berkeley.edu/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "anthropic-blog",
+    "title": "anthropic blog",
+    "description": "anthropic blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.anthropic.com/research",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "openai-blog",
+    "title": "openai blog",
+    "description": "openai blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://openai.com/news/research/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "google-blog",
+    "title": "google research",
+    "description": "google research",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://research.google/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "jalammar-blog",
+    "title": "Jay Alammar",
+    "description": "Jay Alammar",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://jalammar.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "inference-blog",
+    "title": "inFERENCe",
+    "description": "inFERENCe",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.inference.vc/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "mlif-blog",
+    "title": "mlif",
+    "description": "mlif",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.machinelearningisfun.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "vgel-blog",
+    "title": "VGEL Blog",
+    "description": "VGEL Blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://vgel.me/posts/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "jaykmody-blog",
+    "title": "Jay Mody",
+    "description": "Jay Mody",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://jaykmody.com/blog/gpt-from-scratch/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "finbarr-blog",
+    "title": "Finbarr Timbers",
+    "description": "Finbarr Timbers",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://finbarr.ca/blog/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "mastery-blog",
+    "title": "Machine Learning Mastery",
+    "description": "Machine Learning Mastery",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://machinelearningmastery.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "poloclub-blog",
+    "title": "Polo Club",
+    "description": "Polo Club",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://poloclub.github.io/#research-ai",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "groundzero-ai",
+    "title": "GroundZero AI",
+    "description": "GroundZero AI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/tdztf4kXvz",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "eureka-labs",
+    "title": "Eureka Labs",
+    "description": "Eureka Labs",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/axGCnnQ5Mm",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "gpu-mode",
+    "title": "GPU MODE",
+    "description": "GPU MODE",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/g5gAD2vFcm",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "umar-jamil",
+    "title": "Umar Jamil AI",
+    "description": "Umar Jamil AI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/GwRfpxPCnH",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "the-neural-nest",
+    "title": "The Neural Nest",
+    "description": "The Neural Nest",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/qt3aPSGNNk",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "thebloke-ai",
+    "title": "TheBloke AI",
+    "description": "TheBloke AI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/SxswPydGRU",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "fastai",
+    "title": "fast.ai",
+    "description": "fast.ai",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/zJy2PKwWDu",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "latentspace",
+    "title": "Latent Space",
+    "description": "Latent Space",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/KaM9H6QQ5c",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "mech-interp",
+    "title": "Mech Interp",
+    "description": "Mech Interp",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/kfAx26aZY3",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "eleutherai",
+    "title": "EleutherAI",
+    "description": "EleutherAI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://discord.gg/RPKhmstvG2",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "ml-ai",
+    "title": "Machine Learning",
+    "description": "Machine Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.reddit.com/r/MachineLearning/",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "deeplearning",
+    "title": "Deep Learning",
+    "description": "Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.reddit.com/r/deeplearning/",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "local-llama",
+    "title": "LocalLLaMA",
+    "description": "LocalLLaMA",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.reddit.com/r/LocalLLaMA/",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "chatgpt",
+    "title": "ChatGPT",
+    "description": "ChatGPT",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.reddit.com/r/ChatGPT/",
+    "starred": false,
+    "tags": [
+      "community"
+    ],
+    "collectionId": "communities"
+  },
+  {
+    "id": "deeplearningbook-2016",
+    "title": "Deep Learning - Ian Goodfellow",
+    "description": "Deep Learning - Ian Goodfellow",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.deeplearningbook.org/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "udlbook",
+    "title": "Understanding Deep Learning",
+    "description": "Understanding Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://udlbook.github.io/udlbook/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "d2l",
+    "title": "Dive into Deep Learning",
+    "description": "Dive into Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://d2l.ai/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "lbdl",
+    "title": "The Little Book of Deep Learning",
+    "description": "The Little Book of Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://fleuret.org/public/lbdl.pdf",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "grokking-deep-learning",
+    "title": "Grokking Deep Learning",
+    "description": "Grokking Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cdn.ttgtmedia.com/rms/pdf/grokking_deep_learning.pdf",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "fastai-deep-learning-book",
+    "title": "Practical Deep Learning for Coders - fastai",
+    "description": "Practical Deep Learning for Coders - fastai",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://course.fast.ai/Resources/book.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "meta-learning",
+    "title": "Meta Learning - How To Learn Deep Learning And Thrive In The Digital Age",
+    "description": "Meta Learning - How To Learn Deep Learning And Thrive In The Digital Age",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://studylib.net/doc/26113326/radek-osmulski---meta-learning--how-to-learn-deep-learnin...",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "itprnn",
+    "title": "David MacKay - Information Theory, Inference, and Learning Algorithms",
+    "description": "David MacKay - Information Theory, Inference, and Learning Algorithms",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.inference.org.uk/itprnn/book.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "deeplearningai",
+    "title": "DeepLearning.AI",
+    "description": "DeepLearning.AI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://deeplearning.ai/",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "nyudl",
+    "title": "NYU Deep Learning - Yann LeCun",
+    "description": "NYU Deep Learning - Yann LeCun",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://atcold.github.io/NYU-DLSP21/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "mathematics-of-neural-networks-and-deep-learning",
+    "title": "The Complete Mathematics of Neural Networks and Deep Learning",
+    "description": "The Complete Mathematics of Neural Networks and Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=Ixl3nykKG9M",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "intro-to-deep-learning-sr",
+    "title": "Intro to Deep Learning - Sebastian Raschka",
+    "description": "Intro to Deep Learning - Sebastian Raschka",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLTKMiZHVd_2KJtIXOW0zFhFfBaJJilH51",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "fastai-deep-learning-course",
+    "title": "Practical Deep Learning for Coders - fastai",
+    "description": "Practical Deep Learning for Coders - fastai",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://course.fast.ai/",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "fsdl",
+    "title": "Full Stack Deep Learning - 2022",
+    "description": "Full Stack Deep Learning - 2022",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://fullstackdeeplearning.com/course/2022/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "david-mackay-info-theory-pattern-recognition-and-neural-networks",
+    "title": "David MacKay - Information Theory, Pattern Recognition, and Neural Networks",
+    "description": "David MacKay - Information Theory, Pattern Recognition, and Neural Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLruBu5BI5n4aFpG32iMbdWoRVAA-Vcso6",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "cs182-deep-learning",
+    "title": "UC Berkeley CS 182: Deep Learning",
+    "description": "UC Berkeley CS 182: Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "mit-dl",
+    "title": "MIT - Introduction to Deep Learning",
+    "description": "MIT - Introduction to Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://introtodeeplearning.com/",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "stanford-cs231n",
+    "title": "CS231n - Deep Learning for Computer Vision",
+    "description": "CS231n - Deep Learning for Computer Vision",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs231n.stanford.edu/",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "cs224d",
+    "title": "CS224d: Deep Learning for Natural Language Processing",
+    "description": "CS224d: Deep Learning for Natural Language Processing",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PL4PDl8a0S5tvphRVF45G8B7z0pDO6MT7C",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "cnn-mathematical-intuition",
+    "title": "CNN from Scratch with pure  Mathematical Intuition",
+    "description": "CNN from Scratch with pure  Mathematical Intuition",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://lunar-joke-35b.notion.site/CNN-from-Scratch-with-pure-Mathematical-Intuition-a201ef0ca1314058a1707a3ae260981e",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cnn-guide",
+    "title": "Convolutional Neural Network (CNN): A Complete Guide",
+    "description": "Convolutional Neural Network (CNN): A Complete Guide",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://learnopencv.com/understanding-convolutional-neural-networks-cnn/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cnn-explainer",
+    "title": "CNN Explainer",
+    "description": "CNN Explainer",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://poloclub.github.io/cnn-explainer/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "convnetjs",
+    "title": "ConvNetJS - Deep Learning in your browser",
+    "description": "ConvNetJS - Deep Learning in your browser",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs.stanford.edu/people/karpathy/convnetjs/index.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cnn-visualization",
+    "title": "Convolutional Neural Networks Explained (CNN Visualized)",
+    "description": "Convolutional Neural Networks Explained (CNN Visualized)",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=pj9-rr1wDhM",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cnns-from-different-viewpoints",
+    "title": "CNNs from different viewpoints",
+    "description": "CNNs from different viewpoints",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs231n.github.io/understanding-cnn/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "image-kernels",
+    "title": "Image Kernels",
+    "description": "Image Kernels",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://setosa.io/ev/image-kernels/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "visualizing-what-convnets-learn",
+    "title": "Visualizing what ConvNets learn",
+    "description": "Visualizing what ConvNets learn",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs231n.github.io/understanding-cnn/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "convolutions-in-image-processing",
+    "title": "Convolutions in Image Processing",
+    "description": "Convolutions in Image Processing",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=8rrHTtUzyZA",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "understanding-convolution",
+    "title": "Understanding “convolution” operations in CNN",
+    "description": "Understanding “convolution” operations in CNN",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://medium.com/analytics-vidhya/convolution-operations-in-cnn-deep-learning-compter-vision-128906ece7d3",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "convolutional-neural-networks-explained",
+    "title": "Convolutional Neural Networks, Explained",
+    "description": "Convolutional Neural Networks, Explained",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://towardsdatascience.com/convolutional-neural-networks-explained-9cc5188c4939",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rnn-intro",
+    "title": "Recurrent Neural Networks Tutorial, Part 1 - Introduction to RNNs",
+    "description": "Recurrent Neural Networks Tutorial, Part 1 - Introduction to RNNs",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://dennybritz.com/posts/wildml/recurrent-neural-networks-tutorial-part-1/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rnn-lstm",
+    "title": "Understanding LSTM Networks",
+    "description": "Understanding LSTM Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rnn-implementation",
+    "title": "Predict Stock Prices Using RNN: Part 1",
+    "description": "Predict Stock Prices Using RNN: Part 1",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://lilianweng.github.io/posts/2017-07-08-stock-rnn-part-1/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rnn-made-with-ml",
+    "title": "Recurrent Neural Networks (RNN) - Made With ML",
+    "description": "Recurrent Neural Networks (RNN) - Made With ML",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://madewithml.com/courses/foundations/recurrent-neural-networks/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rnn-and-lstm",
+    "title": "RNNs and LSTMs - jurafsky, stanford",
+    "description": "RNNs and LSTMs - jurafsky, stanford",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/8.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "rnn-effectiveness",
+    "title": "The Unreasonable Effectiveness of Recurrent Neural Networks - Karpathy",
+    "description": "The Unreasonable Effectiveness of Recurrent Neural Networks - Karpathy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "nlp-scratch",
+    "title": "NLP from Scratch - PyTorch",
+    "description": "NLP from Scratch - PyTorch",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://pytorch.org/tutorials/intermediate/nlp_from_scratch_index.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "umar-jamil",
+    "title": "Umar Jamil",
+    "description": "Umar Jamil",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/@umarjamilai",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "llm-from-scratch",
+    "title": "Build a Large Language Model (From Scratch) - Sebastian Raschka",
+    "description": "Build a Large Language Model (From Scratch) - Sebastian Raschka",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://livebook.manning.com/book/build-a-large-language-model-from-scratch/title/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "llm-from-scratch-2",
+    "title": "Create a Large Language Model from Scratch with Python - Tutorial by elliotarledge",
+    "description": "Create a Large Language Model from Scratch with Python - Tutorial by elliotarledge",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=UU1WVnMk4E8&t=4303s",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "transformers-from-scratch",
+    "title": "Intro to Transformers (slides) - giffmana",
+    "description": "Intro to Transformers (slides) - giffmana",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://docs.google.com/presentation/d/1ZXFIhYczos679r70Yu8vV9uO6B1J0ztzeDxbnBxD1S0/edit#slide=id.ge2832e38b9_0_21",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "transformers-from-scratch-2",
+    "title": "[M2L 2024] Transformers - Lucas Beyer (giffmana)",
+    "description": "[M2L 2024] Transformers - Lucas Beyer (giffmana)",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=bMXqnLiVgLk",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "transformer-explainer",
+    "title": "TRANSFORMER EXPLAINER - Polo Club",
+    "description": "TRANSFORMER EXPLAINER - Polo Club",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://poloclub.github.io/transformer-explainer/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "illustrated-gpt2",
+    "title": "The Illustrated GPT-2 (Visualizing Transformer Language Models)",
+    "description": "The Illustrated GPT-2 (Visualizing Transformer Language Models)",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://jalammar.github.io/illustrated-gpt2/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "attention-is-all-you-need",
+    "title": "Attention Is All You Need - Implementation",
+    "description": "Attention Is All You Need - Implementation",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/LvanderGoten/AttentionIsAllYouNeed?tab=readme-ov-file",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "linear-relationships-in-the-transformers-positional-encoding",
+    "title": "Linear Relationships in the Transformer's Positional Encoding",
+    "description": "Linear Relationships in the Transformer's Positional Encoding",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://blog.timodenk.com/linear-relationships-in-the-transformers-positional-encoding/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "implement-vit",
+    "title": "Implement and Train ViT From Scratch for Image Recognition - PyTorch",
+    "description": "Implement and Train ViT From Scratch for Image Recognition - PyTorch",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=Vonyoz6Yt9c",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "smol-course",
+    "title": "a smol course - huggingface",
+    "description": "a smol course - huggingface",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/huggingface/smol-course",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "how-i-studied-llms-in-two-weeks",
+    "title": "How I Studied LLMs in Two Weeks: A Comprehensive Roadmap",
+    "description": "How I Studied LLMs in Two Weeks: A Comprehensive Roadmap",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://towardsdatascience.com/how-i-studied-llms-in-two-weeks-a-comprehensive-roadmap-e8ac19667a31",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "how-large-language-models-work",
+    "title": "How Large Language Models work - From zero to ChatGPT",
+    "description": "How Large Language Models work - From zero to ChatGPT",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://medium.com/data-science-at-microsoft/how-large-language-models-work-91c362f5b78f",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "building-effective-agents",
+    "title": "Building effective agents - Anthropic",
+    "description": "Building effective agents - Anthropic",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.anthropic.com/research/building-effective-agents",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "llm-visualization",
+    "title": "LLM Visualization",
+    "description": "LLM Visualization",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://bbycroft.net/llm",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "nlp-course",
+    "title": "nlp course - huggingface",
+    "description": "nlp course - huggingface",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://huggingface.co/learn/nlp-course/chapter1/1",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "zero-to-hero",
+    "title": "Neural Networks: Zero to Hero",
+    "description": "Neural Networks: Zero to Hero",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "zero-to-mastery-pytorch",
+    "title": "Zero to Mastery Learn PyTorch for Deep Learning - Daniel Bourke",
+    "description": "Zero to Mastery Learn PyTorch for Deep Learning - Daniel Bourke",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.learnpytorch.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "zero-to-mastery-pytorch-video",
+    "title": "Learn PyTorch for deep learning in a day. Literally. - Daniel Bourke",
+    "description": "Learn PyTorch for deep learning in a day. Literally. - Daniel Bourke",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=Z_ikDlimN6A",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "pytorch-internals",
+    "title": "PyTorch internals - ezyang's blog",
+    "description": "PyTorch internals - ezyang's blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "http://blog.ezyang.com/2019/05/pytorch-internals/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "minitorch",
+    "title": "MiniTorch",
+    "description": "MiniTorch",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://minitorch.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "pytorch-is-dead",
+    "title": "PyTorch is dead. Long live JAX. - Blog",
+    "description": "PyTorch is dead. Long live JAX. - Blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://neel04.github.io/my-website/blog/pytorch_rant/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "inside-the-matrix",
+    "title": "Inside the Matrix: Visualizing Matrix Multiplication, Attention and Beyond",
+    "description": "Inside the Matrix: Visualizing Matrix Multiplication, Attention and Beyond",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://pytorch.org/blog/inside-the-matrix/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "karpathy-blog",
+    "title": "Blog",
+    "description": "Blog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://karpathy.github.io/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "zero-to-hero",
+    "title": "Neural Networks: Zero to Hero",
+    "description": "Neural Networks: Zero to Hero",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cs231n-2016",
+    "title": "CS231n Winter 2016",
+    "description": "CS231n Winter 2016",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "cs231n-2016-site",
+    "title": "CS231n Winter 2016 - Course Site",
+    "description": "CS231n Winter 2016 - Course Site",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs231n.stanford.edu/2016/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "eureka-labs-ai",
+    "title": "Eureka Labs AI",
+    "description": "Eureka Labs AI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/EurekaLabsAI",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "karpathy-github",
+    "title": "karpathy",
+    "description": "karpathy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/karpathy",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "3b1b-nn",
+    "title": "Neural Networks",
+    "description": "Neural Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.3blue1brown.com/topics/neural-networks",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "3b1b-nn-yt",
+    "title": "Neural Networks",
+    "description": "Neural Networks",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "neilsen-dl",
+    "title": "Suggested by 3B1B - Neural Networks and Deep Learning",
+    "description": "Suggested by 3B1B - Neural Networks and Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "http://neuralnetworksanddeeplearning.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "colah-dl",
+    "title": "Suggested by 3B1B - Calculus on Computational Graphs: Backpropagation",
+    "description": "Suggested by 3B1B - Calculus on Computational Graphs: Backpropagation",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://colah.github.io/posts/2015-08-Backprop/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "neural-networks-demystified",
+    "title": "Suggested by 3B1B - Neural Networks Demystified",
+    "description": "Suggested by 3B1B - Neural Networks Demystified",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "learning-to-see",
+    "title": "Suggested by 3B1B - Learning To See",
+    "description": "Suggested by 3B1B - Learning To See",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLiaHhY2iBX9ihLasvE8BKnS2Xg8AhY6iV",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "roadmap",
+    "title": "Roadmap",
+    "description": "Roadmap",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://aigents.co/learn/roadmaps/deep-learning-roadmap",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "deep-learning-for-tabular-data",
+    "title": "A Short Chronology Of Deep Learning For Tabular Data",
+    "description": "A Short Chronology Of Deep Learning For Tabular Data",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://sebastianraschka.com/blog/2022/deep-learning-for-tabular-data.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "understanding-ai",
+    "title": "Understanding AI - Lee Robinson",
+    "description": "Understanding AI - Lee Robinson",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://leerob.com/n/ai",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "mit-6-034",
+    "title": "MIT 6.034 Artificial Intelligence, Fall 2010",
+    "description": "MIT 6.034 Artificial Intelligence, Fall 2010",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "cornell-ml",
+    "title": "Cornell CS4780 Machine Learning for Decision Making SP17",
+    "description": "Cornell CS4780 Machine Learning for Decision Making SP17",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "ml-in-c",
+    "title": "Machine Learning in C",
+    "description": "Machine Learning in C",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLpM-Dvs8t0VZPZKggcql-MmjaBdZKeDMw",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "machine-learning-coursera",
+    "title": "Andrew Ng's Machine Learning Collection",
+    "description": "Andrew Ng's Machine Learning Collection",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.coursera.org/collections/machine-learning",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "stanford-cs229",
+    "title": "Stanford CS229: Machine Learning Full Course taught by Andrew Ng | Autumn 2018",
+    "description": "Stanford CS229: Machine Learning Full Course taught by Andrew Ng | Autumn 2018",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "applied-ml-2020",
+    "title": "Applied Machine Learning 2020 by Andreas Mueller",
+    "description": "Applied Machine Learning 2020 by Andreas Mueller",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "ml-notebook",
+    "title": "Machine Learning Notebook",
+    "description": "Machine Learning Notebook",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://calvinfeng.gitbook.io/machine-learning-notebook",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "made-with-ml",
+    "title": "Made With ML",
+    "description": "Made With ML",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://madewithml.com/#course",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "courses"
+  },
+  {
+    "id": "python-for-data-analysis",
+    "title": "Python for Data Analysis",
+    "description": "Python for Data Analysis",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://wesmckinney.com/book/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "mlops-basics",
+    "title": "MLOps Basics",
+    "description": "MLOps Basics",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/graviraja/MLOps-Basics",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "mlops-for-beginners",
+    "title": "How to Learn MLOps in 2024 [Courses, Books, and Other Resources]",
+    "description": "How to Learn MLOps in 2024 [Courses, Books, and Other Resources]",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://neptune.ai/blog/how-to-learn-mlops",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "mlops-guide",
+    "title": "MLOps guide - huyen",
+    "description": "MLOps guide - huyen",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://huyenchip.com/mlops/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "mit-svm",
+    "title": "MIT - Learning: Support Vector Machines",
+    "description": "MIT - Learning: Support Vector Machines",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=_PwhiWxHK8o",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "dual-formulation",
+    "title": "Derive the Dual Formulation for Support Vector Machines",
+    "description": "Derive the Dual Formulation for Support Vector Machines",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=4TIbsTa3r24&t=5s",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "compphysics-svm",
+    "title": "Support Vector Machines - compphysics",
+    "description": "Support Vector Machines - compphysics",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://compphysics.github.io/ComputationalPhysics2/doc/LectureNotes/_build/html/supportvectormachines.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "cornell-svm",
+    "title": "Machine Learning Lecture 14 \"(Linear) Support Vector Machines\" -Cornell CS4780 SP17",
+    "description": "Machine Learning Lecture 14 \"(Linear) Support Vector Machines\" -Cornell CS4780 SP17",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=xpHQ6UhMlx4&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "svm-optimization",
+    "title": "Support Vector Machines, Dual Formulation, Quadratic Programming & Sequential Minimal Optimization",
+    "description": "Support Vector Machines, Dual Formulation, Quadratic Programming & Sequential Minimal Optimization",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://towardsdatascience.com/support-vector-machines-dual-formulation-quadratic-programming-sequential-minimal-optimization-57f4387ce4dd#d326",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "svmjs-demo",
+    "title": "Support Vector Machine in Javascript, Demo - Karpathy",
+    "description": "Support Vector Machine in Javascript, Demo - Karpathy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://cs.stanford.edu/~karpathy/svmjs/demo/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "svm-demo",
+    "title": "Interactive demo of Support Vector Machines (SVM)",
+    "description": "Interactive demo of Support Vector Machines (SVM)",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://greitemann.dev/svm-demo",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "cross-entropy-and-log-likelihood",
+    "title": "Cross Entropy and Log Likelihood",
+    "description": "Cross Entropy and Log Likelihood",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.awebb.info/probability/2017/05/18/cross-entropy-and-log-likelihood.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "confused-me-about-cross-entropy",
+    "title": "Things that confused me about cross-entropy",
+    "description": "Things that confused me about cross-entropy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://chris-said.io/2020/12/26/two-things-that-confused-me-about-cross-entropy/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "understanding-binary-cross-entropy-log-loss",
+    "title": "Understanding binary cross-entropy / log loss: a visual explanation",
+    "description": "Understanding binary cross-entropy / log loss: a visual explanation",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "feature-engineering-kaggle",
+    "title": "Feature Engineering - Kaggle",
+    "description": "Feature Engineering - Kaggle",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.kaggle.com/learn/feature-engineering",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "reference-guide-to-fe",
+    "title": "A Reference Guide to Feature Engineering Methods",
+    "description": "A Reference Guide to Feature Engineering Methods",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.kaggle.com/code/prashant111/a-reference-guide-to-feature-engineering-methods",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "advanced-feature-engineering",
+    "title": "Advanced Feature Engineering",
+    "description": "Advanced Feature Engineering",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.kaggle.com/code/seneralkan/advanced-feature-engineering",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "fe-zero-to-hero",
+    "title": "Complete Guide to Feature Engineering: Zero to Hero",
+    "description": "Complete Guide to Feature Engineering: Zero to Hero",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.analyticsvidhya.com/blog/2021/09/complete-guide-to-feature-engineering-zero-to-hero/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "deep-ml",
+    "title": "ML Code Challenges",
+    "description": "ML Code Challenges",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.deep-ml.com/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "uc-ml",
+    "title": "UC Irvine Machine Learning Repository",
+    "description": "UC Irvine Machine Learning Repository",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://archive.ics.uci.edu/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "machine-learning"
+  },
+  {
+    "id": "reinforcement-learning-sutton",
+    "title": "Reinforcement Learning: An Introduction - Book - Sutton",
+    "description": "Reinforcement Learning: An Introduction - Book - Sutton",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "deepmind-rl-course",
+    "title": "DeepMind x UCL | Introduction to Reinforcement Learning 2015",
+    "description": "DeepMind x UCL | Introduction to Reinforcement Learning 2015",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "spinning-up-rl",
+    "title": "Spinning Up - OpenAI",
+    "description": "Spinning Up - OpenAI",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/openai/spinningup",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "algorithms-for-rl",
+    "title": "Algorithms for Reinforcement Learning - Book",
+    "description": "Algorithms for Reinforcement Learning - Book",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "cs294-rl",
+    "title": "CS 294: Deep Reinforcement Learning, Spring 2017",
+    "description": "CS 294: Deep Reinforcement Learning, Spring 2017",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://rll.berkeley.edu/deeprlcoursesp17/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "reinforcement-learning-overview-kpm",
+    "title": "Reinforcement Learning: An Overview - Kevin P. Murphy",
+    "description": "Reinforcement Learning: An Overview - Kevin P. Murphy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arxiv.org/pdf/2412.05265",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "huggingface-deep-rl-course",
+    "title": "Hugging Face - Deep RL Course",
+    "description": "Hugging Face - Deep RL Course",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "reinforcement-learning"
+  },
+  {
+    "id": "is-parallel-programming-hard",
+    "title": "Is Parallel Programming Hard, And, If So, What Can You Do About It",
+    "description": "Is Parallel Programming Hard, And, If So, What Can You Do About It",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.2023.06.11a.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "intro-to-parallel-programming",
+    "title": "Intro to Parallel Programming",
+    "description": "Intro to Parallel Programming",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "programming-parallel-computers",
+    "title": "Programming Parallel Computers",
+    "description": "Programming Parallel Computers",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://ppc.cs.aalto.fi/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "python-parallel-computing",
+    "title": "Python Parallel Computing",
+    "description": "Python Parallel Computing",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PL30NBs02RsiUbmXVPDo56APsU0xa6gfL2",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "nhr-fau-parallel-programming",
+    "title": "NHR@FAU - Parallel Programming",
+    "description": "NHR@FAU - Parallel Programming",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/playlist?list=PLxVedhmuwLq2Ie88ODuZufCGorawPO1AP",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "parallel-programming-las",
+    "title": "Parallel Programming - Leonardo Araujo Santos",
+    "description": "Parallel Programming - Leonardo Araujo Santos",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://leonardoaraujosantos.gitbook.io/opencl",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "cuda-siboehm",
+    "title": "How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance: a Worklog",
+    "description": "How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance: a Worklog",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://siboehm.com/articles/22/CUDA-MMM",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "cuda-elliot",
+    "title": "CUDA Programming Course - High-Performance Computing with GPUs - elliotarledge",
+    "description": "CUDA Programming Course - High-Performance Computing with GPUs - elliotarledge",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/watch?v=86FAWCzIe_4",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "cuda-mode",
+    "title": "GPU(CUDA) MODE",
+    "description": "GPU(CUDA) MODE",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.youtube.com/@GPUMODE",
+    "starred": false,
+    "tags": [
+      "video"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "pmpp",
+    "title": "Programming Massively Parallel Processors",
+    "description": "Programming Massively Parallel Processors",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/h3ct0rjs/HighPerformanceComputing/blob/master/BookRef/Programming%20Massively%20Parallel%20Processors.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "cuda-tutorial",
+    "title": "CUDA Toolkit paperation",
+    "description": "CUDA Toolkit paperation",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://docs.nvidia.com/cuda/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "cuda-cpp-guide",
+    "title": "CUDA C++ Programming Guide",
+    "description": "CUDA C++ Programming Guide",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf",
+    "starred": false,
+    "tags": [
+      "paper"
+    ],
+    "collectionId": "programming"
+  },
+  {
+    "id": "horace-he",
+    "title": "Horace He - Making Deep Learning Go Brrrr",
+    "description": "Horace He - Making Deep Learning Go Brrrr",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://horace.io/brrr_intro.html",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "deep-learning"
+  },
+  {
+    "id": "netron",
+    "title": "Netron - Deep Learning Model Inspector",
+    "description": "Netron - Deep Learning Model Inspector",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://netron.app/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "insights",
+    "title": "Insights | Internet's Best Resources",
+    "description": "Insights | Internet's Best Resources",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://insights.surf/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "advanced-numpy",
+    "title": "Advanced NumPy",
+    "description": "Advanced NumPy",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://wesmckinney.com/book/advanced-numpy",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "stride-guide",
+    "title": "An Illustrated Guide to Shape and Strides",
+    "description": "An Illustrated Guide to Shape and Strides",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://ajcr.net/stride-guide-part-1/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "smolorg",
+    "title": "smolorg - maharshi",
+    "description": "smolorg - maharshi",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/smolorg",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "matrix-calculus",
+    "title": "The Matrix Calculus You Need For Deep Learning",
+    "description": "The Matrix Calculus You Need For Deep Learning",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://explained.ai/matrix-calculus/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "fast-mmm",
+    "title": "Fast Multidimensional Matrix Multiplication on CPU from Scratch",
+    "description": "Fast Multidimensional Matrix Multiplication on CPU from Scratch",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://siboehm.com/articles/22/Fast-MMM-on-CPU",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "computer-vision-papers",
+    "title": "Computer Vision Papers",
+    "description": "Computer Vision Papers",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://paperswithcode.com/area/computer-vision",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "ml-stash",
+    "title": "ml stash",
+    "description": "ml stash",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://arc.net/e/D242E263-31FD-4CF9-A2D5-B67519C049AF",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "seeing-theory",
+    "title": "Seeing Theory - A visual introduction to probability and statistics",
+    "description": "Seeing Theory - A visual introduction to probability and statistics",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://seeing-theory.brown.edu/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "aarish22",
+    "title": "Math & Data Science Digital Library - aarish22",
+    "description": "Math & Data Science Digital Library - aarish22",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://github.com/aarish22/Books",
+    "starred": false,
+    "tags": [
+      "github"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "matrix-visualizer",
+    "title": "Matrix Visualizer",
+    "description": "Matrix Visualizer",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://shad.io/MatVis/",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
+  },
+  {
+    "id": "matrix-cookbook",
+    "title": "The Matrix Cookbook",
+    "description": "The Matrix Cookbook",
+    "createdAt": "2024-08-02T11:33:32Z",
+    "url": "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf",
+    "starred": false,
+    "tags": [
+      "article"
+    ],
+    "collectionId": "tools"
   }
 ]
